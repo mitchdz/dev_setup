@@ -1,0 +1,17 @@
+#this program requires scrot, and ImageMagick
+
+#takes picture
+#blurs picture
+#Superimposes lock picture
+scrot /tmp/i3lock.png
+convert /tmp/i3lock.png -blur 10x10 /tmp/i3lock.png
+convert /tmp/i3lock.png /home/mitch/Pictures/circlelock.png -gravity center -composite /tmp/i3lock.png
+
+#sets the lockscreen.
+i3lock -i /tmp/i3lock.png -u
+
+
+
+
+
+
