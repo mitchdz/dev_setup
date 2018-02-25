@@ -13,11 +13,8 @@ set $mod Mod4
 
 
 
-
-
-
-
-
+#this is the name of the user, it will help callign certain files.
+set $user mitch
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -227,7 +224,7 @@ bar {
         mode hide
         hidden_state hide
         modifier mod4
-        status_command i3blocks -c /home/mitch/.config/i3/i3blocks.conf 
+        status_command i3blocks -c /home/$user/.config/i3/i3blocks.conf 
         tray_output primary
         colors {
                 background #000000
@@ -241,7 +238,7 @@ bar {
 
 }
 
-exec --no-startup-id feh --bg-scale --no-xinerama /home/mitch/.config/i3/background.jpg
+exec --no-startup-id feh --bg-scale --no-xinerama /home/$user/.config/i3/background.jpg
 	#Last directory is my path to my image.
 exec --no-startup-id compton -f
  	#compositor for dx11 that allows transparency of terminal.
