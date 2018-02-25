@@ -2,24 +2,25 @@ This is a list of certain things I need. For now, this is just a list of what th
 
 
 ##-----------------------font-awesome----------------------------##
-
 go to font-awesome github and download 4.7.0
 unzip the .zip in your Downloads
 mkdir ~/.fonts
 sudo mv Font-Awesome-4.7.0/fonts/fontawesome-webfont.ttf ~/.fonts/
-
 #look up fontawesome cheatsheet to look at the icons I want.
-
 ##---------------------------------------------------------------##
 
 
+##----------------------compton----------------------------------##
+sudo apt-get install compton
+##---------------------------------------------------------------##
 
+##-----------------------i3blocks--------------------------------##
+sudo apt-get install i3blocks
+##---------------------------------------------------------------##
 
-
-
-
-
-
+##----------------------feh--------------------------------------##
+sudo apt-get install feh
+##---------------------------------------------------------------##
 
 
 
