@@ -141,9 +141,9 @@ bindsym $mod+Shift+r restart
 	# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+i exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 	#this lets you let you log out of your i3 session.
-bindsym $mod+shift+e exec ~/lock.sh
+bindsym $mod+shift+e exec ~/git/desktop_i3_setup/i3lock-transparent
 	#initiate i3lock in order to lock the screen
-bindsym $mod+shift+p exec ~/lock_v2.sh
+bindsym $mod+shift+p exec ~/git/desktop_i3_setup/i3lock-transparent && systemctl suspend
 	#initiate i3lock, and then put the computer into hybrid mode (basically hibernate)
 bindsym $mod+c exec cava -p ~/.config/cava/config
 	#initiate cava, a console based audio visualizer.
@@ -188,7 +188,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 gaps inner 8
 gaps outer 5
@@ -196,7 +196,7 @@ gaps outer 5
 #set background color
         set $inact-bg            #000000
         set $focus-ws-bg         #d9360d
-        set $active-ws-bg        #663300
+        set $active-ws-bg        #ff581e
 	set $bg-color 	         #2f343f
 	set $inactive-bg-color   #2f343f
 	set $urgent-bg-color     #E53935
@@ -211,7 +211,7 @@ gaps outer 5
 
 # window colors
 #                              border              background         text                 indicator
-client.focused                 $bg-color           $bg-color          $text-color          FF0000
+client.focused                 $bg-color           $bg-color          $text-color          $active-ws-bg #$active-ws-bg
 client.unfocused               $inactive-bg-color  $inactive-bg-color $inactive-text-color FF0000
 client.focused_inactive        $inactive-bg-color  $inactive-bg-color $inactive-text-color FF0000
 client.urgent $urgent-bg-color $urgent-bg-color    $text-color        $text-color          FF0000
@@ -230,10 +230,10 @@ bar {
                 background #000000
                 statusline #ffffff
                 separator  #663300
-# class                            border        background     text
-                focused_workspace  $focus-ws-bg  $bg-color      $text-color
-                active_workspace   $active-ws-bg $active-ws-bg  $text-color
-                inactive_workspace $inact-bg     $ative-ws-bg   $text-color
+# class                            border        background         text
+                focused_workspace  $focus-ws-bg  $bg-color          $text-color
+                active_workspace   $active-ws-bg $active-ws-bg      $text-color
+                inactive_workspace $inact-bg     $inactive-bg-color $text-color
                 }
 
 }
@@ -246,14 +246,15 @@ exec --no-startup-id nm-applet
 	#starts NetworkManager
 exec xrandr --output DP-1 --left-of DVI-I-1
 	#positions my monitors.
+exec "echo 60 | brightness"
+	#sets brightness to 60. Uses brightness script.
 
 # alsa Audio Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1%+"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1%-"
 bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
 
-
-
+#start-pulseaudio-x11 in order to get audio to work with Firefox.
 
 
 
