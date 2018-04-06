@@ -11,12 +11,6 @@
 
 set $mod Mod4
 
-
-
-#this is the name of the user, it will help callign certain files.
-set $user mitch
-
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:System San Francisco Display 6
@@ -36,7 +30,7 @@ font pango:System San Francisco Display 6
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminator #gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -99,16 +93,19 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1 "
+set $workspace1 "1 " 
+set $workspace2 "2"
+set $workspace3 "3"
 set $workspace9 "9 "
+
 
 #
 #
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -120,7 +117,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -224,7 +221,7 @@ bar {
         mode hide
         hidden_state hide
         modifier mod4
-        status_command i3blocks -c /home/$user/.config/i3/i3blocks.conf 
+        status_command i3blocks -c /home/$USER/.config/i3/i3blocks.conf 
         tray_output primary
         colors {
                 background #000000
@@ -238,7 +235,7 @@ bar {
 
 }
 
-exec --no-startup-id feh --bg-scale --no-xinerama /home/$user/.config/i3/background.jpg
+exec --no-startup-id feh --bg-scale --no-xinerama /home/$USER/.config/i3/background.jpg
 	#Last directory is my path to my image.
 exec --no-startup-id compton -f
  	#compositor for dx11 that allows transparency of terminal.
@@ -249,12 +246,20 @@ exec xrandr --output DP-1 --left-of DVI-I-1
 exec "echo 60 | brightness"
 	#sets brightness to 60. Uses brightness script.
 
+exec --no-startup-id start-pulseaudio-x11 #in order to get audio to work with Firefox.
+
+
+for_window [class="Spotify"] move to workspace $workspace3
+
+exec --no-startup-id firefox
+
+exec --no-startup-id spotify
+
+
 # alsa Audio Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1%+"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1%-"
 bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
-
-#start-pulseaudio-x11 in order to get audio to work with Firefox.
 
 
 
