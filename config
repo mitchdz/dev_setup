@@ -129,8 +129,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="Spotify"] $workspace9
 
 
-
-
+	#start a sandboxed Firefox.
+bindsym $mod+shift+Return exec firejail --private --dns=8.8.8.8 --dns=8.8.4.4  firefox -no-remote &
 	# reload the configuration file
 bindsym $mod+Shift+c reload
 	# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -152,6 +152,7 @@ bindsym $mod+shift+d exec cava
 	#couldn't figure out how to start Spotify and Cava at same time, so made sep. com
 bindsym $mod+shift+o exec sudo /opt/WifiRestart/WifiRestart.sh
 	#This command executes a shell script which simply uses network-manager to restart the wifi.
+
 
 
 # resize window (you can also use the mouse for that)
