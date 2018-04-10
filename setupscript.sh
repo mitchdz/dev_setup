@@ -1,4 +1,5 @@
 CONFIG_PATH=~/.config/i3/
+
 #-------------------i3-gaps Dependencies----------------#
 sudo add-apt-repository ppa:aguignard/ppa
 sudo apt-get update
