@@ -1,5 +1,9 @@
 CONFIG_PATH=~/.config/i3/
 
+<<<<<<< HEAD
+=======
+## TODO: make it so you don't need to press "y" to install.
+>>>>>>> b6588ee6db981960d52094ca073ff1ae5ebdc573
 #-------------------i3-gaps Dependencies----------------#
 sudo add-apt-repository ppa:aguignard/ppa
 sudo apt-get update
@@ -35,9 +39,21 @@ mkdir -p build && cd build/
 make
 sudo make install
 
+<<<<<<< HEAD
 #--------------------Moving files from git-----------------#
 cd ~/git/desktop_i3_setup/
 
+=======
+#
+
+--------------------Moving files from git-----------------#
+cd ~/git/desktop_i3_setup/
+
+
+## TODO: reboot and then move config files.
+
+
+>>>>>>> b6588ee6db981960d52094ca073ff1ae5ebdc573
 cp i3blocks.conf 	$CONFIG_PATH
 cp background.jpg 	$CONFIG_PATH
 cp config 		$CONFIG_PATH

@@ -11,8 +11,11 @@
 
 set $mod Mod4
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b6588ee6db981960d52094ca073ff1ae5ebdc573
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:System San Francisco Display 6
@@ -32,7 +35,7 @@ font pango:System San Francisco Display 6
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminator #gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -46,10 +49,10 @@ bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opaci
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -58,10 +61,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -70,7 +73,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h	#changed to $mod+b because changed to vim-like.
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -95,16 +98,19 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1 "
+set $workspace1 "1 " 
+set $workspace2 "2"
+set $workspace3 "3"
 set $workspace9 "9 "
+
 
 #
 #
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -116,7 +122,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -128,8 +134,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="Spotify"] $workspace9
 
 
-
-
+	#start a sandboxed Firefox.
+bindsym $mod+shift+Return exec firejail --private --dns=8.8.8.8 --dns=8.8.4.4  firefox -no-remote &
 	# reload the configuration file
 bindsym $mod+Shift+c reload
 	# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -151,6 +157,7 @@ bindsym $mod+shift+d exec cava
 	#couldn't figure out how to start Spotify and Cava at same time, so made sep. com
 bindsym $mod+shift+o exec sudo /opt/WifiRestart/WifiRestart.sh
 	#This command executes a shell script which simply uses network-manager to restart the wifi.
+
 
 
 # resize window (you can also use the mouse for that)
@@ -245,12 +252,20 @@ exec xrandr --output DP-1 --left-of DVI-I-1
 exec "echo 60 | brightness"
 	#sets brightness to 60. Uses brightness script.
 
+exec --no-startup-id start-pulseaudio-x11 #in order to get audio to work with Firefox.
+
+
+for_window [class="Spotify"] move to workspace $workspace3
+
+exec --no-startup-id firefox
+
+exec --no-startup-id spotify
+
+
 # alsa Audio Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1%+"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1%-"
 bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
-
-#start-pulseaudio-x11 in order to get audio to work with Firefox.
 
 
 
