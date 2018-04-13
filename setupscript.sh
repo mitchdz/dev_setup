@@ -42,7 +42,7 @@ cd ~/git/desktop_i3_setup/
 
 ##TODO:fix how $user gives root when running as sudo.
 
-mk $CONFIG_PATH
+mkdir $CONFIG_PATH
 cp i3blocks.conf 	$CONFIG_PATH
 cp background.jpg 	$CONFIG_PATH
 cp config 		$CONFIG_PATH
