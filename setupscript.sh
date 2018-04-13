@@ -1,24 +1,16 @@
 #!/bin/bash
 
-if [ "$EUID" -e 0]
-	then echo "Please do not run this as root."
-	echo "please login with your regular user."
-	exit
-fi
-
-##TODO:Fix the parts that break when ran as root.
-
-
+#if [ "$EUID" -e 0]
+#	then echo "Please do not run this as root."
+#	echo "please login with your regular user."
+#	exit
+#fi
 
 #to save output of a file do ./setupscript.sh | tee outputtest/trial#
 
+LOGINUSER=$(who am i | awk '{print $1}')	#this is incase someone runs as root.
+CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
-
-
-
-
-
-CONFIG_PATH=~/.config/i3/
 #-------------------i3-gaps Dependencies----------------#
 sudo add-apt-repository ppa:aguignard/ppa
 sudo add-apt-repository ppa:dawidd0811/neofetch
@@ -40,8 +32,8 @@ sudo apt-get install curl -y		#terminal program to transfer a URL.
 sudo apt-get install vim -y		#yes.
 sudo apt-get install neofetch -y	#cool system output for terminal.
 #-----------------Installing and making i3---------------#
-mkdir ~/development/
-cd ~/development/
+mkdir /home/$LOGINUSER/development/
+cd /home/$LOGINUSER/development/
 
 # clone the repository
 git clone https://www.github.com/Airblader/i3 i3-gaps
@@ -63,14 +55,13 @@ sudo apt install zsh -y
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-#--adding powerline fonts--#
-cd ~/git/
+#adding powerline fonts
+cd /home/$LOGINUSER/git/
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-#--done adding those fonts--#
 #----------------------------------------------------------#
 #--------------------Moving files from git-----------------#
 cd ~/git/desktop_i3_setup/
@@ -82,8 +73,8 @@ cp i3blocks.conf 	$CONFIG_PATH
 cp background.jpg 	$CONFIG_PATH
 cp config 		$CONFIG_PATH
 cp i3lock-transparent	$CONFIG_PATH
-cp circlelock.png       /home/$USER/Pictures/circlelock.png
-cp zshrc		/home/$USER/.zshrc
+cp circlelock.png       /home/$LOGINUSER/Pictures/circlelock.png
+cp zshrc		/home/$LOGINUSER/.zshrc
 #----------------------------------------------------------#
 #-------------------adding zsh-----------------------------#
 
