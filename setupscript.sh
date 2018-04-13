@@ -37,18 +37,6 @@ mkdir -p build && cd build/
 make
 sudo make install
 #----------------------------------------------------------#
-#--------------------Moving files from git-----------------#
-cd ~/git/desktop_i3_setup/
-
-##TODO:fix how $user gives root when running as sudo.
-
-mkdir $CONFIG_PATH
-cp i3blocks.conf 	$CONFIG_PATH
-cp background.jpg 	$CONFIG_PATH
-cp config 		$CONFIG_PATH
-cp i3lock-transparent	$CONFIG_PATH
-cp circlelock.png       /home/$USER/Pictures/circlelock.png
-
 #-------------------adding zsh-----------------------------#
 sudo apt install zsh -y
 
@@ -63,6 +51,20 @@ cd ..
 rm -rf fonts
 #--done adding those fonts--#
 #----------------------------------------------------------#
+#--------------------Moving files from git-----------------#
+cd ~/git/desktop_i3_setup/
+
+##TODO:fix how $user gives root when running as sudo.
+
+mkdir $CONFIG_PATH
+cp i3blocks.conf 	$CONFIG_PATH
+cp background.jpg 	$CONFIG_PATH
+cp config 		$CONFIG_PATH
+cp i3lock-transparent	$CONFIG_PATH
+cp circlelock.png       /home/$USER/Pictures/circlelock.png
+cp zsh			/home/$USER/.zshrc
+#----------------------------------------------------------#
+#-------------------adding zsh-----------------------------#
 
 
 
