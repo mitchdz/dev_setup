@@ -50,10 +50,8 @@ cd ~/git/desktop_i3_setup/
 
 ## TODO: reboot and then move config files.
 
-
->>>>>>> b6588ee6db981960d52094ca073ff1ae5ebdc573
 cp i3blocks.conf 	$CONFIG_PATH
 cp background.jpg 	$CONFIG_PATH
 cp config 		$CONFIG_PATH
 cp i3lock-transparent	$CONFIG_PATH
-cp circlelock.png         /home/$USER/Pictures/circlelock.png
+cp circlelock.png       /home/$USER/Pictures/circlelock.png
