@@ -6,7 +6,6 @@ sudo apt-get update
 sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev -y
 #--------------------------------------------------------#
 #-----------------Personal Dependencies------------------#
-#sudo apt-get install scrot imagemagick compton i3blocks feh rofi i3lock i3status thunar terminator curl -y
 sudo apt-get install scrot -y		#commandline tool to take images
 sudo apt-get install imagemagick -y	#commandline tool to edit images
 sudo apt-get install compton -y		#X11 compositor
@@ -18,6 +17,7 @@ sudo apt-get install i3status -y	#i3 program to run in i3block
 sudo apt-get install thunar -y		#file manager I use.
 sudo apt-get install terminator -y	#terminal of choice.
 sudo apt-get install curl -y		#terminal program to transfer a URL.
+sudo apt-get install vim -y		#yes.
 #-----------------Installing and making i3---------------#
 mkdir ~/development/
 cd ~/development/
@@ -62,7 +62,7 @@ cp background.jpg 	$CONFIG_PATH
 cp config 		$CONFIG_PATH
 cp i3lock-transparent	$CONFIG_PATH
 cp circlelock.png       /home/$USER/Pictures/circlelock.png
-cp zsh			/home/$USER/.zshrc
+cp zshrc		/home/$USER/.zshrc
 #----------------------------------------------------------#
 #-------------------adding zsh-----------------------------#
 
