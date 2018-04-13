@@ -250,12 +250,9 @@ exec "echo 60 | brightness"
 exec --no-startup-id start-pulseaudio-x11 #in order to get audio to work with Firefox.
 
 
-for_window [class="Spotify"] move to workspace $workspace3
+#for_window [class="Spotify"] move to workspace $workspace3
 
 exec --no-startup-id firefox
-
-exec --no-startup-id spotify
-
 
 # alsa Audio Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1%+"
