@@ -1,9 +1,7 @@
 CONFIG_PATH=~/.config/i3/
 
-<<<<<<< HEAD
-=======
 ## TODO: make it so you don't need to press "y" to install.
->>>>>>> b6588ee6db981960d52094ca073ff1ae5ebdc573
+
 #-------------------i3-gaps Dependencies----------------#
 sudo add-apt-repository ppa:aguignard/ppa
 sudo apt-get update
@@ -18,8 +16,9 @@ sudo apt-get install compton		#X11 compositor
 sudo apt-get install i3blocks		#i3 program for the bar.
 sudo apt-get install feh		#program to view files for my i3lock
 sudo apt-get install rofi		#program to select files
-sudo apt install i3lock			#i3 lock screen.
+sudo apt-get install i3lock		#i3 lock screen.
 sudo apt-get install i3status		#i3 program to run in i3block
+sudo apt-get install thunar		#file manager I use.
 #-----------------Installing and making i3---------------#
 mkdir ~/development/
 cd ~/development/
@@ -39,7 +38,6 @@ mkdir -p build && cd build/
 make
 sudo make install
 
-<<<<<<< HEAD
 #--------------------Moving files from git-----------------#
 cd ~/git/desktop_i3_setup/
 
