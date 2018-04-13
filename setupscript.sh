@@ -37,14 +37,8 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
-
+#----------------------------------------------------------#
 #--------------------Moving files from git-----------------#
-cd ~/git/desktop_i3_setup/
-
-=======
-#
-
---------------------Moving files from git-----------------#
 cd ~/git/desktop_i3_setup/
 
 
