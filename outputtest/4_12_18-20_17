@@ -1,0 +1,761 @@
+ 
+ More info: https://launchpad.net/~aguignard/+archive/ubuntu/ppa
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmp8wkq6j4l/secring.gpg' created
+gpg: keyring `/tmp/tmp8wkq6j4l/pubring.gpg' created
+gpg: requesting key 9058FBF6 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmp8wkq6j4l/trustdb.gpg: trustdb created
+gpg: key 9058FBF6: public key "Launchpad PPA for Arnaud Guignard" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+Hit:1 http://us.archive.ubuntu.com/ubuntu xenial InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease             
+Hit:3 http://security.ubuntu.com/ubuntu xenial-security InRelease   
+Get:4 http://ppa.launchpad.net/aguignard/ppa/ubuntu xenial InRelease [17.5 kB]
+Hit:5 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease           
+Get:6 http://ppa.launchpad.net/aguignard/ppa/ubuntu xenial/main amd64 Packages [1,952 B]
+Get:7 http://ppa.launchpad.net/aguignard/ppa/ubuntu xenial/main i386 Packages [1,952 B]
+Get:8 http://ppa.launchpad.net/aguignard/ppa/ubuntu xenial/main Translation-en [1,852 B]
+Fetched 23.3 kB in 1s (12.3 kB/s)                   
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  automake autotools-dev debhelper dh-strip-nondeterminism
+  libcairo-script-interpreter2 libcairo2-dev libev4 libexpat1-dev
+  libfile-stripnondeterminism-perl libfontconfig1-dev libfreetype6-dev
+  libglib2.0-dev libharfbuzz-dev libharfbuzz-gobject0 libice-dev
+  libmail-sendmail-perl libpcre3-dev libpcre32-3 libpcrecpp0v5 libpixman-1-dev
+  libpng12-dev libpthread-stubs0-dev libsigsegv2 libsm-dev
+  libsys-hostname-long-perl libx11-dev libx11-doc libxau-dev libxcb-cursor0
+  libxcb-image0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-shm0-dev
+  libxcb-util-dev libxcb-xinerama0 libxcb-xrm0 libxdmcp-dev libxext-dev
+  libxft-dev libxrender-dev m4 po-debconf x11proto-core-dev x11proto-input-dev
+  x11proto-kb-dev x11proto-render-dev x11proto-xext-dev xorg-sgml-doctools
+  xtrans-dev zlib1g-dev
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc libtool dh-make libcairo2-doc
+  libglib2.0-doc libice-doc libpango1.0-doc libsm-doc libxcb-doc libxext-doc
+  libmail-box-perl
+The following NEW packages will be installed:
+  autoconf automake autotools-dev debhelper dh-strip-nondeterminism
+  libcairo-script-interpreter2 libcairo2-dev libev-dev libev4 libexpat1-dev
+  libfile-stripnondeterminism-perl libfontconfig1-dev libfreetype6-dev
+  libglib2.0-dev libharfbuzz-dev libharfbuzz-gobject0 libice-dev
+  libmail-sendmail-perl libpango1.0-dev libpcre3-dev libpcre32-3 libpcrecpp0v5
+  libpixman-1-dev libpng12-dev libpthread-stubs0-dev libsigsegv2 libsm-dev
+  libstartup-notification0-dev libsys-hostname-long-perl libx11-dev libx11-doc
+  libxau-dev libxcb-cursor-dev libxcb-cursor0 libxcb-icccm4-dev
+  libxcb-image0-dev libxcb-keysyms1-dev libxcb-randr0-dev
+  libxcb-render-util0-dev libxcb-render0-dev libxcb-shm0-dev libxcb-util-dev
+  libxcb-util0-dev libxcb-xinerama0 libxcb-xinerama0-dev libxcb-xkb-dev
+  libxcb-xrm-dev libxcb-xrm0 libxcb1-dev libxdmcp-dev libxext-dev libxft-dev
+  libxkbcommon-dev libxkbcommon-x11-dev libxrender-dev libyajl-dev m4
+  po-debconf x11proto-core-dev x11proto-input-dev x11proto-kb-dev
+  x11proto-render-dev x11proto-xext-dev xorg-sgml-doctools xtrans-dev
+  zlib1g-dev
+0 upgraded, 66 newly installed, 0 to remove and 98 not upgraded.
+Need to get 11.6 MB of archives.
+After this operation, 56.1 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpcrecpp0v5 amd64 2:8.38-3.1 [15.2 kB]
+Get:2 http://ppa.launchpad.net/aguignard/ppa/ubuntu xenial/main amd64 libxcb-xrm0 amd64 1.0-1~~xenial1.1 [10.9 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libsigsegv2 amd64 2.10-4 [14.1 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 libxcb-cursor0 amd64 0.1.1-3ubuntu1 [10.4 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 m4 amd64 1.4.17-5 [195 kB]
+Get:6 http://ppa.launchpad.net/aguignard/ppa/ubuntu xenial/main amd64 libxcb-xrm-dev amd64 1.0-1~~xenial1.1 [5,386 B]
+Get:7 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 autoconf all 2.69-9 [321 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 autotools-dev all 20150820.1 [39.8 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 automake all 1:1.15-4ubuntu1 [510 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 po-debconf all 1.0.19 [234 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libfile-stripnondeterminism-perl all 0.015-1 [10.3 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 dh-strip-nondeterminism all 0.015-1 [4,864 B]
+Get:13 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 debhelper all 9.20160115ubuntu3 [739 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libcairo-script-interpreter2 amd64 1.14.6-1 [54.3 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1-dev amd64 2.1.0-7ubuntu0.16.04.3 [115 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 zlib1g-dev amd64 1:1.2.8.dfsg-2ubuntu4.1 [168 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpng12-dev amd64 1.2.54-1ubuntu1 [184 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfreetype6-dev amd64 2.6.1-0.1ubuntu2.3 [956 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfontconfig1-dev amd64 2.11.94-0ubuntu1.1 [658 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 xorg-sgml-doctools all 1:1.11-1 [12.9 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 x11proto-core-dev all 7.0.31-1~ubuntu16.04.2 [254 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxau-dev amd64 1:1.0.8-1 [11.1 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxdmcp-dev amd64 1:1.1.2-1.1 [25.1 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-input-dev all 2.3.1-1 [118 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-kb-dev all 1.0.7-0ubuntu1 [224 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 xtrans-dev all 1.3.5-1 [70.5 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpthread-stubs0-dev amd64 0.3-4 [4,068 B]
+Get:28 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb1-dev amd64 1.11.1-1ubuntu1 [74.2 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libx11-dev amd64 2:1.6.3-1ubuntu2 [642 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-render-dev all 2:0.11.1-2 [20.1 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxrender-dev amd64 1:0.9.9-0ubuntu1 [24.5 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-xext-dev all 7.3.0-1 [212 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxext-dev amd64 2:1.3.3-1 [82.1 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libice-dev amd64 2:1.0.9-1 [44.9 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libsm-dev amd64 2:1.2.2-1 [16.2 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpixman-1-dev amd64 0.33.6-1 [248 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-render0-dev amd64 1.11.1-1ubuntu1 [15.3 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-shm0-dev amd64 1.11.1-1ubuntu1 [6,604 B]
+Get:39 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpcre32-3 amd64 2:8.38-3.1 [136 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpcre3-dev amd64 2:8.38-3.1 [525 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-dev amd64 2.48.2-0ubuntu1 [1,378 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libcairo2-dev amd64 1.14.6-1 [590 kB]
+Get:43 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libharfbuzz-gobject0 amd64 1.0.1-1ubuntu0.1 [10.9 kB]
+Get:44 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libharfbuzz-dev amd64 1.0.1-1ubuntu0.1 [189 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libsys-hostname-long-perl all 1.5-1 [11.7 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libmail-sendmail-perl all 0.79.16-1 [26.5 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxft-dev amd64 2.3.2-1 [45.7 kB]
+Get:48 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libpango1.0-dev amd64 1.38.1-1 [277 kB]
+Get:49 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libstartup-notification0-dev amd64 0.12-4build1 [17.8 kB]
+Get:50 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libx11-doc all 2:1.6.3-1ubuntu2 [1,465 kB]
+Get:51 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-randr0-dev amd64 1.11.1-1ubuntu1 [18.2 kB]
+Get:52 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-xinerama0 amd64 1.11.1-1ubuntu1 [5,204 B]
+Get:53 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-xinerama0-dev amd64 1.11.1-1ubuntu1 [5,810 B]
+Get:54 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-xkb-dev amd64 1.11.1-1ubuntu1 [40.4 kB]
+Get:55 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-util-dev amd64 0.4.0-0ubuntu3 [9,974 B]
+Get:56 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-util0-dev amd64 0.4.0-0ubuntu3 [2,534 B]
+Get:57 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxkbcommon-dev amd64 0.5.0-1ubuntu2 [231 kB]
+Get:58 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 libev4 amd64 1:4.22-1 [26.3 kB]
+Get:59 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 libev-dev amd64 1:4.22-1 [116 kB]
+Get:60 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-render-util0-dev amd64 0.3.9-1 [7,372 B]
+Get:61 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-image0-dev amd64 0.4.0-1build1 [14.9 kB]
+Get:62 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 libxcb-cursor-dev amd64 0.1.1-3ubuntu1 [12.2 kB]
+Get:63 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-icccm4-dev amd64 0.4.1-1ubuntu1 [10.4 kB]
+Get:64 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-keysyms1-dev amd64 0.4.0-1 [6,046 B]
+Get:65 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libxkbcommon-x11-dev amd64 0.5.0-1ubuntu2 [16.0 kB]
+Get:66 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libyajl-dev amd64 2.1.0-2 [24.7 kB]
+Fetched 11.6 MB in 2s (4,720 kB/s)  
+Extracting templates from packages: 100%
+Selecting previously unselected package libpcrecpp0v5:amd64.
+(Reading database ... 178070 files and directories currently installed.)
+Preparing to unpack .../libpcrecpp0v5_2%3a8.38-3.1_amd64.deb ...
+Unpacking libpcrecpp0v5:amd64 (2:8.38-3.1) ...
+Selecting previously unselected package libsigsegv2:amd64.
+Preparing to unpack .../libsigsegv2_2.10-4_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.10-4) ...
+Selecting previously unselected package libxcb-cursor0:amd64.
+Preparing to unpack .../libxcb-cursor0_0.1.1-3ubuntu1_amd64.deb ...
+Unpacking libxcb-cursor0:amd64 (0.1.1-3ubuntu1) ...
+Selecting previously unselected package m4.
+Preparing to unpack .../archives/m4_1.4.17-5_amd64.deb ...
+Unpacking m4 (1.4.17-5) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../autoconf_2.69-9_all.deb ...
+Unpacking autoconf (2.69-9) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../autotools-dev_20150820.1_all.deb ...
+Unpacking autotools-dev (20150820.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../automake_1%3a1.15-4ubuntu1_all.deb ...
+Unpacking automake (1:1.15-4ubuntu1) ...
+Selecting previously unselected package po-debconf.
+Preparing to unpack .../po-debconf_1.0.19_all.deb ...
+Unpacking po-debconf (1.0.19) ...
+Selecting previously unselected package libfile-stripnondeterminism-perl.
+Preparing to unpack .../libfile-stripnondeterminism-perl_0.015-1_all.deb ...
+Unpacking libfile-stripnondeterminism-perl (0.015-1) ...
+Selecting previously unselected package dh-strip-nondeterminism.
+Preparing to unpack .../dh-strip-nondeterminism_0.015-1_all.deb ...
+Unpacking dh-strip-nondeterminism (0.015-1) ...
+Selecting previously unselected package debhelper.
+Preparing to unpack .../debhelper_9.20160115ubuntu3_all.deb ...
+Unpacking debhelper (9.20160115ubuntu3) ...
+Selecting previously unselected package libcairo-script-interpreter2:amd64.
+Preparing to unpack .../libcairo-script-interpreter2_1.14.6-1_amd64.deb ...
+Unpacking libcairo-script-interpreter2:amd64 (1.14.6-1) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../libexpat1-dev_2.1.0-7ubuntu0.16.04.3_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../zlib1g-dev_1%3a1.2.8.dfsg-2ubuntu4.1_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.8.dfsg-2ubuntu4.1) ...
+Selecting previously unselected package libpng12-dev:amd64.
+Preparing to unpack .../libpng12-dev_1.2.54-1ubuntu1_amd64.deb ...
+Unpacking libpng12-dev:amd64 (1.2.54-1ubuntu1) ...
+Selecting previously unselected package libfreetype6-dev:amd64.
+Preparing to unpack .../libfreetype6-dev_2.6.1-0.1ubuntu2.3_amd64.deb ...
+Unpacking libfreetype6-dev:amd64 (2.6.1-0.1ubuntu2.3) ...
+Selecting previously unselected package libfontconfig1-dev:amd64.
+Preparing to unpack .../libfontconfig1-dev_2.11.94-0ubuntu1.1_amd64.deb ...
+Unpacking libfontconfig1-dev:amd64 (2.11.94-0ubuntu1.1) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../xorg-sgml-doctools_1%3a1.11-1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1) ...
+Selecting previously unselected package x11proto-core-dev.
+Preparing to unpack .../x11proto-core-dev_7.0.31-1~ubuntu16.04.2_all.deb ...
+Unpacking x11proto-core-dev (7.0.31-1~ubuntu16.04.2) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../libxau-dev_1%3a1.0.8-1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.8-1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../libxdmcp-dev_1%3a1.1.2-1.1_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.2-1.1) ...
+Selecting previously unselected package x11proto-input-dev.
+Preparing to unpack .../x11proto-input-dev_2.3.1-1_all.deb ...
+Unpacking x11proto-input-dev (2.3.1-1) ...
+Selecting previously unselected package x11proto-kb-dev.
+Preparing to unpack .../x11proto-kb-dev_1.0.7-0ubuntu1_all.deb ...
+Unpacking x11proto-kb-dev (1.0.7-0ubuntu1) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../xtrans-dev_1.3.5-1_all.deb ...
+Unpacking xtrans-dev (1.3.5-1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../libpthread-stubs0-dev_0.3-4_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.3-4) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../libxcb1-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../libx11-dev_2%3a1.6.3-1ubuntu2_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.6.3-1ubuntu2) ...
+Selecting previously unselected package x11proto-render-dev.
+Preparing to unpack .../x11proto-render-dev_2%3a0.11.1-2_all.deb ...
+Unpacking x11proto-render-dev (2:0.11.1-2) ...
+Selecting previously unselected package libxrender-dev:amd64.
+Preparing to unpack .../libxrender-dev_1%3a0.9.9-0ubuntu1_amd64.deb ...
+Unpacking libxrender-dev:amd64 (1:0.9.9-0ubuntu1) ...
+Selecting previously unselected package x11proto-xext-dev.
+Preparing to unpack .../x11proto-xext-dev_7.3.0-1_all.deb ...
+Unpacking x11proto-xext-dev (7.3.0-1) ...
+Selecting previously unselected package libxext-dev:amd64.
+Preparing to unpack .../libxext-dev_2%3a1.3.3-1_amd64.deb ...
+Unpacking libxext-dev:amd64 (2:1.3.3-1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../libice-dev_2%3a1.0.9-1_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.9-1) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../libsm-dev_2%3a1.2.2-1_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.2-1) ...
+Selecting previously unselected package libpixman-1-dev.
+Preparing to unpack .../libpixman-1-dev_0.33.6-1_amd64.deb ...
+Unpacking libpixman-1-dev (0.33.6-1) ...
+Selecting previously unselected package libxcb-render0-dev:amd64.
+Preparing to unpack .../libxcb-render0-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-render0-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-shm0-dev:amd64.
+Preparing to unpack .../libxcb-shm0-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-shm0-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libpcre32-3:amd64.
+Preparing to unpack .../libpcre32-3_2%3a8.38-3.1_amd64.deb ...
+Unpacking libpcre32-3:amd64 (2:8.38-3.1) ...
+Selecting previously unselected package libpcre3-dev:amd64.
+Preparing to unpack .../libpcre3-dev_2%3a8.38-3.1_amd64.deb ...
+Unpacking libpcre3-dev:amd64 (2:8.38-3.1) ...
+Selecting previously unselected package libglib2.0-dev.
+Preparing to unpack .../libglib2.0-dev_2.48.2-0ubuntu1_amd64.deb ...
+Unpacking libglib2.0-dev (2.48.2-0ubuntu1) ...
+Selecting previously unselected package libcairo2-dev.
+Preparing to unpack .../libcairo2-dev_1.14.6-1_amd64.deb ...
+Unpacking libcairo2-dev (1.14.6-1) ...
+Selecting previously unselected package libharfbuzz-gobject0:amd64.
+Preparing to unpack .../libharfbuzz-gobject0_1.0.1-1ubuntu0.1_amd64.deb ...
+Unpacking libharfbuzz-gobject0:amd64 (1.0.1-1ubuntu0.1) ...
+Selecting previously unselected package libharfbuzz-dev.
+Preparing to unpack .../libharfbuzz-dev_1.0.1-1ubuntu0.1_amd64.deb ...
+Unpacking libharfbuzz-dev (1.0.1-1ubuntu0.1) ...
+Selecting previously unselected package libsys-hostname-long-perl.
+Preparing to unpack .../libsys-hostname-long-perl_1.5-1_all.deb ...
+Unpacking libsys-hostname-long-perl (1.5-1) ...
+Selecting previously unselected package libmail-sendmail-perl.
+Preparing to unpack .../libmail-sendmail-perl_0.79.16-1_all.deb ...
+Unpacking libmail-sendmail-perl (0.79.16-1) ...
+Selecting previously unselected package libxft-dev.
+Preparing to unpack .../libxft-dev_2.3.2-1_amd64.deb ...
+Unpacking libxft-dev (2.3.2-1) ...
+Selecting previously unselected package libpango1.0-dev.
+Preparing to unpack .../libpango1.0-dev_1.38.1-1_amd64.deb ...
+Unpacking libpango1.0-dev (1.38.1-1) ...
+Selecting previously unselected package libstartup-notification0-dev:amd64.
+Preparing to unpack .../libstartup-notification0-dev_0.12-4build1_amd64.deb ...
+Unpacking libstartup-notification0-dev:amd64 (0.12-4build1) ...
+Selecting previously unselected package libx11-doc.
+Preparing to unpack .../libx11-doc_2%3a1.6.3-1ubuntu2_all.deb ...
+Unpacking libx11-doc (2:1.6.3-1ubuntu2) ...
+Selecting previously unselected package libxcb-randr0-dev:amd64.
+Preparing to unpack .../libxcb-randr0-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-randr0-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-xinerama0:amd64.
+Preparing to unpack .../libxcb-xinerama0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-xinerama0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-xinerama0-dev:amd64.
+Preparing to unpack .../libxcb-xinerama0-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-xinerama0-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-xkb-dev:amd64.
+Preparing to unpack .../libxcb-xkb-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-xkb-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-xrm0.
+Preparing to unpack .../libxcb-xrm0_1.0-1~~xenial1.1_amd64.deb ...
+Unpacking libxcb-xrm0 (1.0-1~~xenial1.1) ...
+Selecting previously unselected package libxcb-util-dev:amd64.
+Preparing to unpack .../libxcb-util-dev_0.4.0-0ubuntu3_amd64.deb ...
+Unpacking libxcb-util-dev:amd64 (0.4.0-0ubuntu3) ...
+Selecting previously unselected package libxcb-util0-dev:amd64.
+Preparing to unpack .../libxcb-util0-dev_0.4.0-0ubuntu3_amd64.deb ...
+Unpacking libxcb-util0-dev:amd64 (0.4.0-0ubuntu3) ...
+Selecting previously unselected package libxcb-xrm-dev.
+Preparing to unpack .../libxcb-xrm-dev_1.0-1~~xenial1.1_amd64.deb ...
+Unpacking libxcb-xrm-dev (1.0-1~~xenial1.1) ...
+Selecting previously unselected package libxkbcommon-dev.
+Preparing to unpack .../libxkbcommon-dev_0.5.0-1ubuntu2_amd64.deb ...
+Unpacking libxkbcommon-dev (0.5.0-1ubuntu2) ...
+Selecting previously unselected package libev4.
+Preparing to unpack .../libev4_1%3a4.22-1_amd64.deb ...
+Unpacking libev4 (1:4.22-1) ...
+Selecting previously unselected package libev-dev.
+Preparing to unpack .../libev-dev_1%3a4.22-1_amd64.deb ...
+Unpacking libev-dev (1:4.22-1) ...
+Selecting previously unselected package libxcb-render-util0-dev:amd64.
+Preparing to unpack .../libxcb-render-util0-dev_0.3.9-1_amd64.deb ...
+Unpacking libxcb-render-util0-dev:amd64 (0.3.9-1) ...
+Selecting previously unselected package libxcb-image0-dev:amd64.
+Preparing to unpack .../libxcb-image0-dev_0.4.0-1build1_amd64.deb ...
+Unpacking libxcb-image0-dev:amd64 (0.4.0-1build1) ...
+Selecting previously unselected package libxcb-cursor-dev:amd64.
+Preparing to unpack .../libxcb-cursor-dev_0.1.1-3ubuntu1_amd64.deb ...
+Unpacking libxcb-cursor-dev:amd64 (0.1.1-3ubuntu1) ...
+Selecting previously unselected package libxcb-icccm4-dev:amd64.
+Preparing to unpack .../libxcb-icccm4-dev_0.4.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-icccm4-dev:amd64 (0.4.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-keysyms1-dev:amd64.
+Preparing to unpack .../libxcb-keysyms1-dev_0.4.0-1_amd64.deb ...
+Unpacking libxcb-keysyms1-dev:amd64 (0.4.0-1) ...
+Selecting previously unselected package libxkbcommon-x11-dev.
+Preparing to unpack .../libxkbcommon-x11-dev_0.5.0-1ubuntu2_amd64.deb ...
+Unpacking libxkbcommon-x11-dev (0.5.0-1ubuntu2) ...
+Selecting previously unselected package libyajl-dev:amd64.
+Preparing to unpack .../libyajl-dev_2.1.0-2_amd64.deb ...
+Unpacking libyajl-dev:amd64 (2.1.0-2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for install-info (6.1.0.dfsg.1-5) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for doc-base (0.10.7) ...
+Processing 5 added doc-base files...
+Processing triggers for libglib2.0-0:amd64 (2.48.2-0ubuntu1) ...
+Setting up libpcrecpp0v5:amd64 (2:8.38-3.1) ...
+Setting up libsigsegv2:amd64 (2.10-4) ...
+Setting up libxcb-cursor0:amd64 (0.1.1-3ubuntu1) ...
+Setting up m4 (1.4.17-5) ...
+Setting up autoconf (2.69-9) ...
+Setting up autotools-dev (20150820.1) ...
+Setting up automake (1:1.15-4ubuntu1) ...
+update-alternatives: using /usr/bin/automake-1.15 to provide /usr/bin/automake (automake) in auto mode
+Setting up po-debconf (1.0.19) ...
+Setting up libfile-stripnondeterminism-perl (0.015-1) ...
+Setting up libcairo-script-interpreter2:amd64 (1.14.6-1) ...
+Setting up libexpat1-dev:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Setting up zlib1g-dev:amd64 (1:1.2.8.dfsg-2ubuntu4.1) ...
+Setting up libpng12-dev:amd64 (1.2.54-1ubuntu1) ...
+Setting up libfreetype6-dev:amd64 (2.6.1-0.1ubuntu2.3) ...
+Setting up libfontconfig1-dev:amd64 (2.11.94-0ubuntu1.1) ...
+Setting up xorg-sgml-doctools (1:1.11-1) ...
+Setting up x11proto-core-dev (7.0.31-1~ubuntu16.04.2) ...
+Setting up libxau-dev:amd64 (1:1.0.8-1) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.2-1.1) ...
+Setting up x11proto-input-dev (2.3.1-1) ...
+Setting up x11proto-kb-dev (1.0.7-0ubuntu1) ...
+Setting up xtrans-dev (1.3.5-1) ...
+Setting up libpthread-stubs0-dev:amd64 (0.3-4) ...
+Setting up libxcb1-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libx11-dev:amd64 (2:1.6.3-1ubuntu2) ...
+Setting up x11proto-render-dev (2:0.11.1-2) ...
+Setting up libxrender-dev:amd64 (1:0.9.9-0ubuntu1) ...
+Setting up x11proto-xext-dev (7.3.0-1) ...
+Setting up libxext-dev:amd64 (2:1.3.3-1) ...
+Setting up libice-dev:amd64 (2:1.0.9-1) ...
+Setting up libsm-dev:amd64 (2:1.2.2-1) ...
+Setting up libpixman-1-dev (0.33.6-1) ...
+Setting up libxcb-render0-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-shm0-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libpcre32-3:amd64 (2:8.38-3.1) ...
+Setting up libpcre3-dev:amd64 (2:8.38-3.1) ...
+Setting up libglib2.0-dev (2.48.2-0ubuntu1) ...
+Setting up libcairo2-dev (1.14.6-1) ...
+Setting up libharfbuzz-gobject0:amd64 (1.0.1-1ubuntu0.1) ...
+Setting up libharfbuzz-dev (1.0.1-1ubuntu0.1) ...
+Setting up libsys-hostname-long-perl (1.5-1) ...
+Setting up libmail-sendmail-perl (0.79.16-1) ...
+Setting up libxft-dev (2.3.2-1) ...
+Setting up libpango1.0-dev (1.38.1-1) ...
+Setting up libstartup-notification0-dev:amd64 (0.12-4build1) ...
+Setting up libx11-doc (2:1.6.3-1ubuntu2) ...
+Setting up libxcb-randr0-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-xinerama0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-xinerama0-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-xkb-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-xrm0 (1.0-1~~xenial1.1) ...
+Setting up libxcb-util-dev:amd64 (0.4.0-0ubuntu3) ...
+Setting up libxcb-util0-dev:amd64 (0.4.0-0ubuntu3) ...
+Setting up libxcb-xrm-dev (1.0-1~~xenial1.1) ...
+Setting up libxkbcommon-dev (0.5.0-1ubuntu2) ...
+Setting up libev4 (1:4.22-1) ...
+Setting up libev-dev (1:4.22-1) ...
+Setting up libxcb-render-util0-dev:amd64 (0.3.9-1) ...
+Setting up libxcb-image0-dev:amd64 (0.4.0-1build1) ...
+Setting up libxcb-cursor-dev:amd64 (0.1.1-3ubuntu1) ...
+Setting up libxcb-icccm4-dev:amd64 (0.4.1-1ubuntu1) ...
+Setting up libxcb-keysyms1-dev:amd64 (0.4.0-1) ...
+Setting up libxkbcommon-x11-dev (0.5.0-1ubuntu2) ...
+Setting up libyajl-dev:amd64 (2.1.0-2) ...
+Setting up dh-strip-nondeterminism (0.015-1) ...
+Setting up debhelper (9.20160115ubuntu3) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package ImageMagick
+Cloning into 'i3-gaps'...
+remote: Counting objects: 37816, done.
+remote: Compressing objects: 100% (236/236), done.
+remote: Total 37816 (delta 271), reused 316 (delta 199), pack-reused 37375
+Receiving objects: 100% (37816/37816), 10.72 MiB | 6.00 MiB/s, done.
+Resolving deltas: 100% (28897/28897), done.
+Checking connectivity... done.
+configure.ac:119: installing './ar-lib'
+configure.ac:60: installing './compile'
+configure.ac:7: installing './config.guess'
+configure.ac:7: installing './config.sub'
+configure.ac:8: installing './install-sh'
+configure.ac:8: installing './missing'
+Makefile.am:229: warning: '%'-style pattern rules are a GNU make extension
+Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking target system type... x86_64-pc-linux-gnu
+checking for gsed... sed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for gawk... (cached) mawk
+checking for GNU make... make
+checking for a sed that does not truncate output... /bin/sed
+checking whether to build with code coverage support... no
+checking whether to enable debugging... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for pid_t... (cached) yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether lstat correctly handles trailing slash... yes
+checking for working strnlen... yes
+checking for atexit... yes
+checking for dup2... yes
+checking for ftruncate... yes
+checking for getcwd... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for memchr... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for rmdir... yes
+checking for setlocale... yes
+checking for socket... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strrchr... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for library containing floor... -lm
+checking for library containing ev_run... -lev
+checking for library containing shm_open... -lrt
+checking for library containing iconv_open... none required
+checking whether gcc is Clang... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for LIBSN... yes
+checking for XCB... yes
+checking for XCB_UTIL... yes
+checking for XCB_UTIL_CURSOR... yes
+checking for XCB_UTIL_KEYSYMS... yes
+checking for XCB_UTIL_WM... yes
+checking for XCB_UTIL_XRM... yes
+checking for XKBCOMMON... yes
+checking for YAJL... yes
+checking for LIBPCRE... yes
+checking for PANGOCAIRO... yes
+checking for gawk... (cached) mawk
+checking how to run the C preprocessor... gcc -E
+checking whether make sets $(MAKE)... (cached) yes
+checking for ranlib... ranlib
+checking whether ln -s works... yes
+checking for asciidoc... no
+checking for xmlto... no
+checking for pod2man... /usr/bin/pod2man
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking CFLAGS for maximum warnings... -Wall
+checking whether C compiler accepts -Wunused-value... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking for inttypes.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating testcases/lib/i3test.pm
+config.status: creating man/asciidoc.conf
+config.status: creating testcases/complete-run.pl
+config.status: creating config.h
+config.status: executing buildir commands
+config.status: skipping top_srcdir/Makefile - not created
+config.status: executing depfiles commands
+--------------------------------------------------------------------------------
+build configured:
+
+  i3 version:             4.15.0.1-107-g34cf107 (2018-03-31, branch "gaps-next")
+  is release version:     no
+
+  build manpages:         no
+  build docs:             no
+  enable debug flags:     yes
+  code coverage:          no
+  enabled sanitizers:     
+
+To compile, run:
+
+  cd /home/mitch/development/i3-gaps/build && make -j8
+--------------------------------------------------------------------------------
+make  all-am
+make[1]: Entering directory '/home/mitch/development/i3-gaps/build'
+  CC       libi3/libi3_a-dpi.o
+  CC       libi3/libi3_a-draw_util.o
+  CC       libi3/libi3_a-fake_configure_notify.o
+  CC       libi3/libi3_a-font.o
+  CC       libi3/libi3_a-format_placeholders.o
+  CC       libi3/libi3_a-get_colorpixel.o
+  CC       libi3/libi3_a-get_config_path.o
+  CC       libi3/libi3_a-get_exe_path.o
+  CC       libi3/libi3_a-get_mod_mask.o
+  CC       libi3/libi3_a-get_process_filename.o
+  CC       libi3/libi3_a-get_visualtype.o
+  CC       libi3/libi3_a-ipc_connect.o
+  CC       libi3/libi3_a-ipc_recv_message.o
+  CC       libi3/libi3_a-ipc_send_message.o
+  CC       libi3/libi3_a-is_debug_build.o
+  CC       libi3/libi3_a-mkdirp.o
+  CC       libi3/libi3_a-resolve_tilde.o
+  CC       libi3/libi3_a-root_atom_contents.o
+  CC       libi3/libi3_a-safewrappers.o
+  CC       libi3/libi3_a-string.o
+  CC       libi3/libi3_a-strndup.o
+  CC       libi3/libi3_a-ucs2_conversion.o
+  AR       libi3.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       src/i3-assignments.o
+  CC       src/i3-bindings.o
+  CC       src/i3-click.o
+  CC       src/i3-commands.o
+  GEN      i3-command-parser.stamp
+  CC       src/i3-commands_parser.o
+  CC       src/i3-con.o
+  CC       src/i3-config.o
+  CC       src/i3-config_directives.o
+  GEN      i3-config-parser.stamp
+  CC       src/i3-config_parser.o
+  CC       src/i3-display_version.o
+  CC       src/i3-ewmh.o
+  CC       src/i3-fake_outputs.o
+  CC       src/i3-floating.o
+  CC       src/i3-handlers.o
+  CC       src/i3-ipc.o
+  CC       src/i3-key_press.o
+  CC       src/i3-load_layout.o
+  CC       src/i3-log.o
+  CC       src/i3-main.o
+  CC       src/i3-manage.o
+  CC       src/i3-match.o
+  CC       src/i3-move.o
+  CC       src/i3-output.o
+  CC       src/i3-randr.o
+  CC       src/i3-regex.o
+  CC       src/i3-render.o
+  CC       src/i3-resize.o
+  CC       src/i3-restore_layout.o
+  CC       src/i3-scratchpad.o
+  CC       src/i3-sd-daemon.o
+  CC       src/i3-sighandler.o
+  CC       src/i3-startup.o
+  CC       src/i3-sync.o
+  CC       src/i3-tree.o
+  CC       src/i3-util.o
+  CC       src/i3-version.o
+  CC       src/i3-window.o
+  CC       src/i3-workspace.o
+  CC       src/i3-x.o
+  CC       src/i3-xcb.o
+  CC       src/i3-xcursor.o
+  CC       src/i3-xinerama.o
+  CCLD     i3
+  CC       i3bar/src/i3bar_i3bar-child.o
+  CC       i3bar/src/i3bar_i3bar-config.o
+  CC       i3bar/src/i3bar_i3bar-ipc.o
+  CC       i3bar/src/i3bar_i3bar-main.o
+  CC       i3bar/src/i3bar_i3bar-mode.o
+  CC       i3bar/src/i3bar_i3bar-outputs.o
+  CC       i3bar/src/i3bar_i3bar-parse_json_header.o
+  CC       i3bar/src/i3bar_i3bar-workspaces.o
+  CC       i3bar/src/i3bar_i3bar-xcb.o
+  CCLD     i3bar/i3bar
+  CC       i3-config-wizard/i3_config_wizard_i3_config_wizard-main.o
+  CCLD     i3-config-wizard/i3-config-wizard
+  CC       i3-dump-log/i3_dump_log_i3_dump_log-main.o
+  CCLD     i3-dump-log/i3-dump-log
+  CC       i3-input/i3_input_i3_input-keysym2ucs.o
+  CC       i3-input/i3_input_i3_input-main.o
+  CCLD     i3-input/i3-input
+  CC       i3-msg/i3_msg_i3_msg-main.o
+  CCLD     i3-msg/i3-msg
+  CC       i3-nagbar/i3_nagbar_i3_nagbar-main.o
+  CCLD     i3-nagbar/i3-nagbar
+make[1]: Leaving directory '/home/mitch/development/i3-gaps/build'
+make[1]: Entering directory '/home/mitch/development/i3-gaps/build'
+ /bin/mkdir -p '/usr/bin'
+  /usr/bin/install -c i3 i3bar/i3bar i3-config-wizard/i3-config-wizard i3-dump-log/i3-dump-log i3-input/i3-input i3-msg/i3-msg i3-nagbar/i3-nagbar '/usr/bin'
+ /bin/mkdir -p '/usr/bin'
+ /usr/bin/install -c ../../i3-gaps/i3-dmenu-desktop ../../i3-gaps/i3-migrate-config-to-v4 ../../i3-gaps/i3-save-tree ../../i3-gaps/i3-sensible-editor ../../i3-gaps/i3-sensible-pager ../../i3-gaps/i3-sensible-terminal '/usr/bin'
+make  install-exec-hook
+make[2]: Entering directory '/home/mitch/development/i3-gaps/build'
+ln -s -f i3 /usr/bin/i3-with-shmlog
+make[2]: Leaving directory '/home/mitch/development/i3-gaps/build'
+ /bin/mkdir -p '/usr/share/applications'
+ /usr/bin/install -c -m 644 ../../i3-gaps/share/applications/i3.desktop '/usr/share/applications'
+ /bin/mkdir -p '/etc/i3'
+ /usr/bin/install -c -m 644 ../../i3-gaps/etc/config ../../i3-gaps/etc/config.keycodes '/etc/i3'
+ /bin/mkdir -p '/usr/share/xsessions'
+ /usr/bin/install -c -m 644 ../../i3-gaps/share/xsessions/i3.desktop ../../i3-gaps/share/xsessions/i3-with-shmlog.desktop '/usr/share/xsessions'
+ /bin/mkdir -p '/usr/include/i3'
+ /usr/bin/install -c -m 644 ../../i3-gaps/include/i3/ipc.h '/usr/include/i3'
+make[1]: Leaving directory '/home/mitch/development/i3-gaps/build'
+./setupscript.sh: line 45: mk: command not found
+cp: cannot create regular file '/home/mitch/.config/i3/': Not a directory
+cp: cannot create regular file '/home/mitch/.config/i3/': Not a directory
+cp: cannot create regular file '/home/mitch/.config/i3/': Not a directory
+cp: cannot create regular file '/home/mitch/.config/i3/': Not a directory
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  zsh-common
+Suggested packages:
+  zsh-doc
+The following NEW packages will be installed:
+  zsh zsh-common
+0 upgraded, 2 newly installed, 0 to remove and 98 not upgraded.
+Need to get 3,830 kB of archives.
+After this operation, 14.2 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 zsh-common all 5.1.1-1ubuntu2.2 [3,177 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 zsh amd64 5.1.1-1ubuntu2.2 [653 kB]
+Fetched 3,830 kB in 1s (2,641 kB/s)
+Selecting previously unselected package zsh-common.
+(Reading database ... 181743 files and directories currently installed.)
+Preparing to unpack .../zsh-common_5.1.1-1ubuntu2.2_all.deb ...
+Unpacking zsh-common (5.1.1-1ubuntu2.2) ...
+Selecting previously unselected package zsh.
+Preparing to unpack .../zsh_5.1.1-1ubuntu2.2_amd64.deb ...
+Unpacking zsh (5.1.1-1ubuntu2.2) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up zsh-common (5.1.1-1ubuntu2.2) ...
+Setting up zsh (5.1.1-1ubuntu2.2) ...
+update-alternatives: using /bin/zsh5 to provide /bin/zsh (zsh) in auto mode
+update-alternatives: using /bin/zsh5 to provide /bin/rzsh (rzsh) in auto mode
+./setupscript.sh: line 55: curl: command not found
+Cloning into 'fonts'...
+remote: Counting objects: 309, done.
+remote: Compressing objects: 100% (235/235), done.
+remote: Total 309 (delta 76), reused 257 (delta 72), pack-reused 0
+Receiving objects: 100% (309/309), 10.34 MiB | 6.76 MiB/s, done.
+Resolving deltas: 100% (76/76), done.
+Checking connectivity... done.
+Copying fonts...
+Resetting font cache, this may take a moment...
+Powerline fonts installed to /home/mitch/.local/share/fonts
+
