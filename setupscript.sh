@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 if [ "$EUID" -e 0]
 	then echo "Please do not run this as root."
