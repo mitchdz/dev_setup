@@ -1,3 +1,23 @@
+
+
+if [ "$EUID" -e 0]
+	then echo "Please do not run this as root."
+	echo "please login with your regular user."
+	exit
+fi
+
+##TODO:Fix the parts that break when ran as root.
+
+
+
+#to save output of a file do ./setupscript.sh | tee outputtest/trial#
+
+
+
+
+
+
+
 CONFIG_PATH=~/.config/i3/
 #-------------------i3-gaps Dependencies----------------#
 sudo add-apt-repository ppa:aguignard/ppa
