@@ -40,6 +40,8 @@ sudo make install
 #--------------------Moving files from git-----------------#
 cd ~/git/desktop_i3_setup/
 
+##TODO:fix how $user gives root when running as sudo.
+
 mk $CONFIG_PATH
 cp i3blocks.conf 	$CONFIG_PATH
 cp background.jpg 	$CONFIG_PATH
@@ -47,4 +49,22 @@ cp config 		$CONFIG_PATH
 cp i3lock-transparent	$CONFIG_PATH
 cp circlelock.png       /home/$USER/Pictures/circlelock.png
 
-reboot
+#-------------------adding zsh-----------------------------#
+sudo apt install zsh -y
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#--adding powerline fonts--#
+cd ~/git/
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+#--done adding those fonts--#
+#----------------------------------------------------------#
+
+
+
+#TODO:add reboot once I'm done with the script.
+#reboot
