@@ -54,7 +54,7 @@ sudo make install
 #----------------------------------------------------------#
 #-------------------adding zsh-----------------------------#
 sudo apt install zsh -y
-
+##TODO:pass exit command into the new zsh login screen.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #adding powerline fonts
@@ -66,7 +66,7 @@ cd ..
 rm -rf fonts
 #----------------------------------------------------------#
 #--------------------Moving files from git-----------------#
-cd ~/git/desktop_i3_setup/
+cd /home/$LOGINUSER/git/desktop_i3_setup/
 
 ##TODO:fix how $user gives root when running as sudo.
 
