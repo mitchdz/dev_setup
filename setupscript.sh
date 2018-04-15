@@ -8,6 +8,9 @@
 
 #to save output of a file do ./setupscript.sh | tee outputtest/trial#
 
+
+
+	#who am i did not work on base ubuntu build.
 LOGINUSER=$(whoami | awk '{print $1}')	#this is incase someone runs as root.
 CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
