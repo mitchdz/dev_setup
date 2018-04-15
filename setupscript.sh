@@ -8,7 +8,7 @@
 
 #to save output of a file do ./setupscript.sh | tee outputtest/trial#
 
-LOGINUSER=$(who am i | awk '{print $1}')	#this is incase someone runs as root.
+LOGINUSER=$(whoami | awk '{print $1}')	#this is incase someone runs as root.
 CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
 #-------------------i3-gaps Dependencies----------------#
