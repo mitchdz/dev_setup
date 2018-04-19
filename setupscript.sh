@@ -60,7 +60,7 @@ sudo apt install zsh -y
 ##method to take out env zsh inside of install script.
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
 sed -i.tmp 's:env zsh::g' install.sh
-#sed -i.tmp 's:chsh -s .*$::g' install.sh
+sed -i.tmp 's:chsh -s .*$::g' install.sh
 sh install.sh
 
 
