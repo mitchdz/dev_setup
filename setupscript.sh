@@ -54,7 +54,6 @@ sudo make install
 #----------------------------------------------------------#
 #-------------------adding zsh-----------------------------#
 sudo apt install zsh -y
-##TODO:pass exit command into the new zsh login screen.
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 ##method to take out env zsh inside of install script.
@@ -84,6 +83,10 @@ cp config 		$CONFIG_PATH
 cp i3lock-transparent	$CONFIG_PATH
 cp circlelock.png       /home/$LOGINUSER/Pictures/circlelock.png
 cp zshrc		/home/$LOGINUSER/.zshrc
+
+sed -i "/.*export ZSH=.*/c '\t' export ZSH=/home/$LOGINUSER/.zshrc" /home/$USER/.zshrc
+	#this is the testing I am doing with inserting a tab inside of sed.
+#sed -i "/.*export ZSH=.*/c  \t export ZSH=/home/$USER/.zshrc" /home/$USER/.zshrc
 #----------------------------------------------------------#
 #-------------------adding zsh-----------------------------#
 
