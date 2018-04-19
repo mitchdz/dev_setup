@@ -14,8 +14,8 @@ LOGINUSER=$(whoami | awk '{print $1}')	#this is incase someone runs as root.
 CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
 #-------------------i3-gaps Dependencies----------------#
-sudo add-apt-repository ppa:aguignard/ppa
-sudo add-apt-repository ppa:dawidd0811/neofetch
+sudo add-apt-repository ppa:aguignard/ppa -y
+sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo apt-get update
 sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev -y
 #--------------------------------------------------------#
@@ -55,7 +55,14 @@ sudo make install
 #-------------------adding zsh-----------------------------#
 sudo apt install zsh -y
 ##TODO:pass exit command into the new zsh login screen.
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+##method to take out env zsh inside of install script.
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
+sed -i.tmp 's:env zsh::g' install.sh
+#sed -i.tmp 's:chsh -s .*$::g' install.sh
+sh install.sh
+
 
 #adding powerline fonts
 cd /home/$LOGINUSER/git/
