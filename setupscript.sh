@@ -84,9 +84,9 @@ cp i3lock-transparent	$CONFIG_PATH
 cp circlelock.png       /home/$LOGINUSER/Pictures/circlelock.png
 cp zshrc		/home/$LOGINUSER/.zshrc
 
-sed -i "/.*export ZSH=.*/c   export ZSH=/home/$LOGINUSER/.zshrc" /home/$LOGINUSER/.zshrc
+sed -i "/.*export ZSH=.*/c   export ZSH=/home/$LOGINUSER/.oh-my-zsh" /home/$LOGINUSER/.zshrc
 	#this is the testing I am doing with inserting a tab inside of sed.
-#sed -i "/.*export ZSH=.*/c  \t export ZSH=/home/$USER/.zshrc" /home/$USER/.zshrc
+#sed -i "/.*export ZSH=.*/c   export ZSH=/home/$USER/.oh-my-zsh" /home/$USER/.zshrc
 #----------------------------------------------------------#
 #-------------------adding zsh-----------------------------#
 
