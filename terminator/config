@@ -13,6 +13,8 @@
 [plugins]
 [profiles]
   [[default]]
+    background_darkness = 0.72
     background_image = None
+    background_type = transparent
     font = Ubuntu Mono derivative Powerline 13
     use_system_font = False
