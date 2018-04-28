@@ -1,5 +1,7 @@
 #!/bin/bash
 clear
+
+	#un-comment this if I want to disable root.
 #if [ "$EUID" -e 0]
 #	then echo "Please do not run this as root."
 #	echo "please login with your regular user."
@@ -9,7 +11,7 @@ clear
 #to save output of a file do ./setupscript.sh | tee outputtest/trial#
 
 
-
+#----------------Color Codes for Bash (:------------------#
 #Black        0;30     Dark Gray     1;30
 #Red          0;31     Light Red     1;31
 #Green        0;32     Light Green   1;32
@@ -18,7 +20,7 @@ clear
 #Purple       0;35     Light Purple  1;35
 #Cyan         0;36     Light Cyan    1;36
 #Light Gray   0;37     White         1;37
-
+#----------------------------------------------------------#
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
@@ -30,11 +32,23 @@ echo -e "This program should work without running it as sudo."
 echo -e " ** \t ${RED}This script ${BOLD}will${NB} install PPA's without prompts${NC}"
 echo -e " ** \t ${RED}Please read the script in its entirety before running it${NC}"
 
-echo -e "${GREEN}Press space to continue or CTRL+C to exit..${NC}"
+if [ -f /etc/os-release ]; then
 
-read -n1 -r -p "" key
+        . /etc/os-release
+        OS=$NAME
+        VER=$VERSION_ID
 
-if [ "$key" = '' ]; then
+fi
+
+echo -e "I detect your system is ${BOLD}$OS $VER${NB}"
+
+echo -e "${GREEN}Press space to continue or CTRL+C to exit..${NC}"	#prompt the user.
+read -n1 -r -p "" key							#get input from user
+if [ "$key" = '' ]; then						#proceed is space is pressed.
+
+if [$OS -e "Ubuntu"]; then
+	PACKAGEMAN="apt-get install"
+fi
 
 	#who am i did not work on base ubuntu build.
 LOGINUSER=$(whoami | awk '{print $1}')	#this is incase someone runs as root.
