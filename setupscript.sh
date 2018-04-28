@@ -27,24 +27,35 @@ NC='\033[0m' # No Color
 BOLD="\e[1m"
 NB="\e[21m" #No Bold
 
-echo -e "Hello! welcome to my install script. This script is intended to be used on Ubuntu 16.04.4 as of April 25th."
+echo -e "Hello! welcome to my install script. This script is intended to be used on Ubuntu 16.04/17.04/18.04 as of April 28th."
 echo -e "This program should work without running it as sudo."
 echo -e " ** \t ${RED}This script ${BOLD}will${NB} install PPA's without prompts${NC}"
 echo -e " ** \t ${RED}Please read the script in its entirety before running it${NC}"
 
-if [ -f /etc/os-release ]; then
+if [ -f /etc/os-release ]; then	#attempt to determine what the system is running.
 
         . /etc/os-release
         OS=$NAME
         VER=$VERSION_ID
+	
+	if [ -z "$OS" ] || [ -z "$OS" ]; then	#checks if string is zero length.
+		echo -e "I could not detect what your system is. Defaulting to ${BOLD}Ubuntu 16.04${NC}"
+		OS="Ubuntu"
+		VER="16.04"
+	else
+		echo -e "I detect your system is ${BOLD}$OS $VER${NB}"
+	fi
 
+else
+	echo -e "I could not detect what your system is. Defaulting to ${BOLD}Ubuntu 16.04${NC}"
+	OS="Ubuntu"
+	VER="16.04"
 fi
 
-echo -e "I detect your system is ${BOLD}$OS $VER${NB}"
 
 echo -e "${GREEN}Press space to continue or CTRL+C to exit..${NC}"	#prompt the user.
-read -n1 -r -p "" key							#get input from user
-if [ "$key" = '' ]; then						#proceed is space is pressed.
+read -n1 -r -p "" key		#get input from user
+if [ "$key" = '' ]; then	#proceed is space is pressed.
 
 if [$OS -e "Ubuntu"]; then
 	PACKAGEMAN="apt-get install"
@@ -55,10 +66,20 @@ LOGINUSER=$(whoami | awk '{print $1}')	#this is incase someone runs as root.
 CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
 #-------------------i3-gaps Dependencies----------------#
+if [ "$OS" == "Ubuntu" ]; then #dependencies for Ubuntu.
+		#dependencies for Ubuntu 16.04
+        if [ "$VER" == "16.04" ]; then	
 sudo add-apt-repository ppa:aguignard/ppa -y
 sudo add-apt-repository ppa:dawidd0811/neofetch -y
-sudo apt-get update
 sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev -y
+		#dependencies for Ubuntu 18.04/17.04
+        elif [ "$VER" == "18.04" ] || [ "$VER" == "17.04"]; then	
+sudo apt-get install neofetch -y
+sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake
+        fi
+sudo apt-get update
+fi
+
 #--------------------------------------------------------#
 #-----------------Personal Dependencies------------------#
 sudo apt-get install scrot -y		#commandline tool to take images
