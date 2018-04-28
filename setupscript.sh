@@ -57,7 +57,7 @@ echo -e "${GREEN}Press space to continue or CTRL+C to exit..${NC}"	#prompt the u
 read -n1 -r -p "" key		#get input from user
 if [ "$key" = '' ]; then	#proceed is space is pressed.
 
-if [$OS -e "Ubuntu"]; then
+if [ "$OS" == "Ubuntu" ]; then
 	PACKAGEMAN="apt-get install"
 fi
 
@@ -153,9 +153,8 @@ chsh -s /bin/zsh
 mkdir /home/$LOGINUSER/.config/terminator/
 sudo ln -s /home/$LOGINUSER/git/desktop_i3_setup/terminator/config /home/$LOGINUSER/.config/terminator/config
 #----------------------------------------------------------#
-#-------------------adding zsh-----------------------------#
 
-reboot
+#reboot
 
 else
 	echo "that isn't space or Ctrl+C silly!"
