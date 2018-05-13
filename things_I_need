@@ -1,26 +1,35 @@
-This is a list of certain things I need. For now, this is just a list of what they are and how to get them. I'll automate this later.
+
+I have recently gotten the G903 and the corsair strafe RGB.
+
+I will be adding the drivers and dependencies needed for it in this file.
 
 
-##-----------------------font-awesome----------------------------##
-go to font-awesome github and download 4.7.0
-unzip the .zip in your Downloads
-mkdir ~/.fonts
-sudo mv Font-Awesome-4.7.0/fonts/fontawesome-webfont.ttf ~/.fonts/
-#look up fontawesome cheatsheet to look at the icons I want.
-##---------------------------------------------------------------##
 
 
-##----------------------compton----------------------------------##
-sudo apt-get install compton
-##---------------------------------------------------------------##
 
-##-----------------------i3blocks--------------------------------##
-sudo apt-get install i3blocks
-##---------------------------------------------------------------##
+Corsair Strafe:
 
-##----------------------feh--------------------------------------##
-sudo apt-get install feh
-##---------------------------------------------------------------##
+
+I am using ckb-next currently. Very good program. To get to run in the background I currently am using
+
+ckb-next & disown
+
+I will need to find a more efficient command.
+
+
+
+
+
+g903:
+
+
+none yet.
+YET.
+
+
+
+
+
 
 
 
