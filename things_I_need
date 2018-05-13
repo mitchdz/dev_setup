@@ -22,9 +22,9 @@ I will need to find a more efficient command.
 
 g903:
 
+xset mouse 0 0
 
-none yet.
-YET.
+#sets mouse acceleration to 0 (first option) and something else to 0. lol IDK.
 
 
 
