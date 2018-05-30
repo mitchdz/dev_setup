@@ -1,7 +1,7 @@
 #this program requires scrot, and ImageMagick
 
 IMAGE=/tmp/i3lock.png
-LOCKIMAGE=/home/mitch/Pictures/circlelock.png	#this is the transparent lock image that we will use.
+LOCKIMAGE=~/Pictures/circlelock.png	#this is the transparent lock image that we will use.
 
 #takes picture
 #blurs picture
