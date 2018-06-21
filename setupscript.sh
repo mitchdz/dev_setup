@@ -149,7 +149,7 @@ cp zshrc		/home/$LOGINUSER/.zshrc
 sed -i "/.*export ZSH=.*/c   export ZSH=/home/$LOGINUSER/.oh-my-zsh" /home/$LOGINUSER/.zshrc
 	#this is the testing I am doing with inserting a tab inside of sed.
 #sed -i "/.*export ZSH=.*/c   export ZSH=/home/$USER/.oh-my-zsh" /home/$USER/.zshrc
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 mkdir /home/$LOGINUSER/.config/terminator/
 sudo ln -s /home/$LOGINUSER/git/desktop_i3_setup/terminator/config /home/$LOGINUSER/.config/terminator/config
 #----------------------------------------------------------#
