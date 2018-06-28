@@ -34,9 +34,9 @@ echo -e " ** \t ${RED}Please read the script in its entirety before running it${
 
 if [ -f /etc/os-release ]; then	#attempt to determine what the system is running.
 
-        . /etc/os-release
-        OS=$NAME
-        VER=$VERSION_ID
+        . /etc/os-release # change directory
+        OS=$NAME	  # find OS 
+        VER=$VERSION_ID	  # find OS version
 	
 	if [ -z "$OS" ] || [ -z "$OS" ]; then	#checks if string is zero length.
 		echo -e "I could not detect what your system is. Defaulting to ${BOLD}Ubuntu 16.04${NC}"
