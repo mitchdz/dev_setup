@@ -242,13 +242,15 @@ exec --no-startup-id compton -f
  	#compositor for dx11 that allows transparency of terminal.
 exec --no-startup-id nm-applet
 	#starts NetworkManager
-exec xrandr --output DP-1 --left-of DVI-I-1
-	#positions my monitors.
-exec "echo 60 | brightness"
-	#sets brightness to 60. Uses brightness script.
 
 exec --no-startup-id start-pulseaudio-x11 #in order to get audio to work with Firefox.
 
+
+exec -no-startup-id "sleep 1; xrandr --dpi 220" #this is to deal with scaling on my laptop
+exec xrandr --output HDMI-2 --left-of eDP-1 #positions monitor for laptop
+
+#echo 2 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::kbd_backlight/brightness
+	#command to change brightness of keyboard
 
 #for_window [class="Spotify"] move to workspace $workspace3
 
@@ -256,6 +258,3 @@ exec --no-startup-id start-pulseaudio-x11 #in order to get audio to work with Fi
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1%+"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1%-"
 bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
-
-
-
