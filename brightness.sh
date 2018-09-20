@@ -7,13 +7,22 @@
 	#"brightness" anywhere in the terminal.
 ##---------------------------------------##
 
-##---------Pipe brightness value---------##
-	#If you wish to put the brightness into the command as you call it, use |
-	#ex: to set the monitors to a brightness of 42% you would invoke
-	#echo 42 | brightness
-##---------------------------------------##
+##---------pass in brightness value---------##
+	#can pass in argument such as:
+	# brightness 60
+	#to set the brightness to 60%.
+##------------------------------------------##
+
+if [ -z "$1" ]	#check if first input parameter is null
+then
+
 printf "What brightness level do you want the monitors to become? Enter an percentage: "
 read BRIGHTNESS
+
+else
+BRIGHTNESS=$1
+fi
+
 echo "         --------------------You selected a brightness of $BRIGHTNESS%--------------------"
 str=$(xrandr --query | grep " connected " | grep -Eo '^[^ ]+')
 for word in $str; do
