@@ -73,7 +73,7 @@ sudo add-apt-repository ppa:aguignard/ppa -y
 sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev -y
 		#dependencies for Ubuntu 18.04/17.04
-        elif [ "$VER" == "18.04" ] || [ "$VER" == "17.04"]; then	
+        elif [ "$VER" == "18.04" ] || [ "$VER" == "17.04" ] || [ "$VER" == "18.04" ]; then	
 sudo apt-get install neofetch -y
 sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake -y
         fi
