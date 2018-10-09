@@ -23,7 +23,7 @@ else
 BRIGHTNESS=$1
 fi
 
-echo "         --------------------You selected a brightness of $BRIGHTNESS%--------------------"
+#echo "		You selected a brightness of $BRIGHTNESS%"
 str=$(xrandr --query | grep " connected " | grep -Eo '^[^ ]+')
 for word in $str; do
 		xrandr --output $word --brightness $(bc<<<"$BRIGHTNESS * .01")
