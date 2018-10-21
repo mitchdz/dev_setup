@@ -236,7 +236,9 @@ bar {
 
 }
 
-exec --no-startup-id feh --bg-scale --no-xinerama /home/$USER/.config/i3/background.jpg
+#exec --no-startup-id feh --bg-scale --no-xinerama /home/$USER/.config/i3/background.jpg
+exec --no-startup-id eh --bg-fill /home/$USER/.config/i3/background.jpg
+	#first option scans picture across display, second mirrors.
 	#Last directory is my path to my image.
 exec --no-startup-id compton -f
  	#compositor for dx11 that allows transparency of terminal.
