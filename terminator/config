@@ -13,8 +13,8 @@
 [plugins]
 [profiles]
   [[default]]
-    background_darkness = 0.72
-    background_image = None
+    background_darkness = 0.86
     background_type = transparent
+    cursor_color = "#aaaaaa"
     font = Ubuntu Mono derivative Powerline 13
     use_system_font = False
