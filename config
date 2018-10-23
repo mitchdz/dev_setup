@@ -236,9 +236,7 @@ bar {
 
 }
 
-#exec --no-startup-id feh --bg-scale --no-xinerama /home/$USER/.config/i3/background.jpg
-exec --no-startup-id eh --bg-fill /home/$USER/.config/i3/background.jpg
-	#first option scans picture across display, second mirrors.
+exec --no-startup-id feh --bg-fill /home/$USER/.config/i3/background.jpg
 	#Last directory is my path to my image.
 exec --no-startup-id compton -f
  	#compositor for dx11 that allows transparency of terminal.
@@ -249,14 +247,16 @@ exec --no-startup-id start-pulseaudio-x11 #in order to get audio to work with Fi
 
 
 exec -no-startup-id "sleep 1; xrandr --dpi 220" #this is to deal with scaling on my laptop
-exec xrandr --output HDMI-2 --left-of eDP-1 #positions monitor for laptop
-
+#exec xrandr --output HDMI-2 --left-of eDP-1 #positions monitor for laptop
+exec xrandr --output DP-2 --left-of eDP-1
 #echo 2 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::kbd_backlight/brightness
 	#command to change brightness of keyboard
 
 #for_window [class="Spotify"] move to workspace $workspace3
 
+
+
 # alsa Audio Controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1%+"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1%-"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse set Master 1%+"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse set Master 1%-"
 bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
