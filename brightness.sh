@@ -20,7 +20,7 @@ printf "What brightness level do you want the monitors to become? Enter an perce
 read BRIGHTNESS
 
 else
-BRIGHTNESS=$1
+BRIGHTNESS=$1	#brightness becomes value of input
 fi
 
 #echo "		You selected a brightness of $BRIGHTNESS%"
