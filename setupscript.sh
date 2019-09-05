@@ -1,14 +1,12 @@
 #!/bin/bash
 clear
 
-	#un-comment this if I want to disable root.
-#if [ "$EUID" -e 0]
-#	then echo "Please do not run this as root."
-#	echo "please login with your regular user."
-#	exit
-#fi
-
-#to save output of a file do ./setupscript.sh | tee outputtest/trial#
+un-comment this if I want to disable root.
+if [ "$EUID" -e 0] then 
+	echo "Please do not run this as root."
+	echo "please login with your regular user."
+	exit
+fi
 
 
 #----------------Color Codes for Bash (:------------------#
@@ -114,25 +112,6 @@ mkdir -p build && cd build/
 make
 sudo make install
 #----------------------------------------------------------#
-#-------------------adding zsh-----------------------------#
-sudo apt install zsh -y
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-##method to take out env zsh inside of install script.
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
-sed -i.tmp 's:env zsh::g' install.sh
-sed -i.tmp 's:chsh -s .*$::g' install.sh
-sh install.sh
-
-
-#adding powerline fonts
-cd /home/$LOGINUSER/git/
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
-#----------------------------------------------------------#
 #--------------------Moving files from git-----------------#
 cd /home/$LOGINUSER/git/desktop_i3_setup/
 
@@ -144,14 +123,7 @@ cp background.jpg 	$CONFIG_PATH
 cp config 		$CONFIG_PATH
 cp i3lock-transparent	$CONFIG_PATH
 cp circlelock.png       /home/$LOGINUSER/Pictures/circlelock.png
-cp zshrc		/home/$LOGINUSER/.zshrc
 
-sed -i "/.*export ZSH=.*/c   export ZSH=/home/$LOGINUSER/.oh-my-zsh" /home/$LOGINUSER/.zshrc
-	#this is the testing I am doing with inserting a tab inside of sed.
-#sed -i "/.*export ZSH=.*/c   export ZSH=/home/$USER/.oh-my-zsh" /home/$USER/.zshrc
-#chsh -s /bin/zsh
-mkdir /home/$LOGINUSER/.config/terminator/
-sudo ln -s /home/$LOGINUSER/git/desktop_i3_setup/terminator/config /home/$LOGINUSER/.config/terminator/config
 #----------------------------------------------------------#
 
 #reboot
