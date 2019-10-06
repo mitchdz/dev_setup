@@ -1,5 +1,0 @@
-If anyone is using Linux, I was able to get this to work natively.
-
- 
-
-I needed to follow this guide - https://it.arizona.edu/documentation/ua-vpn-download-and-installation-instructions-linux. Do not use the .tar_.gz file from https://softwarelicense.arizona.edu/cisco-anyconnect-vpn-client as that did not work. (Also, I'm not sure why they put a _  in the middle of the suffix). After that, you need to add an executable permission to "anyconnect-linux64-4.5.00058-core-vpn-webdeploy-k9.sh" and then run it like a normal application. From there, you need to go and run /opt/cisco/anyconnect/bin/vpnui. From there, you have to write "vpn.arizona.edu" into the query for "Connect to:" and then you can choose your group. It worked at first, but was very slow (in the 10bps range type of slow), but after disconnecting and reconnecting I was able to get a reliable connection.
