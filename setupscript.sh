@@ -1,13 +1,14 @@
 #!/bin/bash
-clear
 
-un-comment this if I want to disable root.
+LOGINUSER=$(whoami | awk '{print $1}')	
+CONFIG_PATH=/home/$LOGINUSER/.config/i3/
+
+# check if sudo was used
 if [ "$EUID" -e 0] then 
 	echo "Please do not run this as root."
 	echo "please login with your regular user."
 	exit
 fi
-
 
 #----------------Color Codes for Bash (:------------------#
 #Black        0;30     Dark Gray     1;30
@@ -25,6 +26,7 @@ NC='\033[0m' # No Color
 BOLD="\e[1m"
 NB="\e[21m" #No Bold
 
+clear
 echo -e "Hello! welcome to my install script. This script is intended to be used on Ubuntu 16.04/17.04/18.04 as of April 28th."
 echo -e "This program should work without running it as sudo."
 echo -e " ** \t ${RED}This script ${BOLD}will${NB} install PPA's without prompts${NC}"
@@ -59,9 +61,6 @@ if [ "$OS" == "Ubuntu" ]; then
 	PACKAGEMAN="apt-get install"
 fi
 
-	#who am i did not work on base ubuntu build.
-LOGINUSER=$(whoami | awk '{print $1}')	#this is incase someone runs as root.
-CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
 #-------------------i3-gaps Dependencies----------------#
 if [ "$OS" == "Ubuntu" ]; then #dependencies for Ubuntu.
@@ -114,8 +113,6 @@ sudo make install
 #----------------------------------------------------------#
 #--------------------Moving files from git-----------------#
 cd /home/$LOGINUSER/git/desktop_i3_setup/
-
-##TODO:fix how $user gives root when running as sudo.
 
 mkdir $CONFIG_PATH
 cp i3blocks.conf 	$CONFIG_PATH
