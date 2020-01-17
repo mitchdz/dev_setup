@@ -4,11 +4,11 @@ LOGINUSER=$(whoami | awk '{print $1}')
 CONFIG_PATH=/home/$LOGINUSER/.config/i3/
 
 # check if sudo was used
-if [ "$EUID" -e 0] then 
-	echo "Please do not run this as root."
-	echo "please login with your regular user."
-	exit
-fi
+# if [ "$EUID" -e 0] then
+# 	echo "Please do not run this as root."
+# 	echo "please login with your regular user."
+# 	exit
+# fi
 
 #----------------Color Codes for Bash (:------------------#
 #Black        0;30     Dark Gray     1;30
@@ -88,7 +88,6 @@ sudo apt-get install rofi -y		#program to select files
 sudo apt-get install i3lock -y		#i3 lock screen.
 sudo apt-get install i3status -y	#i3 program to run in i3block
 sudo apt-get install thunar -y		#file manager I use.
-sudo apt-get install terminator -y	#terminal of choice.
 sudo apt-get install curl -y		#terminal program to transfer a URL.
 sudo apt-get install vim -y		#yes.
 sudo apt-get install neofetch -y	#cool system output for terminal.
