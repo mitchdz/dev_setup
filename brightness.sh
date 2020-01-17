@@ -1,17 +1,19 @@
 #!/bin/bash
-#this program is made to run on Ubuntu 16.04, and requires no additional packages.
-##-------------Symbolic Link-------------##
-	#to be able to call the command brightness anyhwere use the command
-	#sudo ln -s /path/to/brightness.sh /usr/local/bin/brightness
-	#where /path/to/brightness.sh is where brightness.sh is, then you will be able to call
-	#"brightness" anywhere in the terminal.
-##---------------------------------------##
+
+##---------dependency list---------##
+	# xrandr tested with v1.5
+	# grep tested with v3.3
+##---------------------------------##
 
 ##---------pass in brightness value---------##
 	#can pass in argument such as:
 	# brightness 60
 	#to set the brightness to 60%.
 ##------------------------------------------##
+
+##-------------Symbolic Link-------------##
+	#sudo ln -s /<path>/<to>/brightness.sh /usr/local/bin/brightness
+##---------------------------------------##
 
 if [ -z "$1" ]	#check if first input parameter is null
 then
