@@ -1,4 +1,4 @@
-I know use regolith desktop (:
+I now use regolith desktop!
 
 ```
 sudo add-apt-repository ppa:kgilmer/regolith-stable
