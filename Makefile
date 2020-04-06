@@ -16,7 +16,7 @@ YouCompleteMe:
 	cd ~/.vim/bundle/YouCompleteMe
 	python3 install.py --clangd-completer
 
-all: dependencies
+all: packages
 	@echo 'this build script has been tested on Ubuntu 19.04 using regolith.'
 	@echo 'sudo add-apt-repository ppa:kgilmer/regolith-stable'
 	@echo 'sudo apt update -y'
