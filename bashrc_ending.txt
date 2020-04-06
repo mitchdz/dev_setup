@@ -1,0 +1,13 @@
+# personal data
+
+# add github credentials to user
+export EDITOR=vim
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/github
+clear # do not show text from adding ssh key
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\
+}
+export PS1="\[\033[96m\]\u@\h: \[\033[33m\]\w\[\033[32m\]\$(pa

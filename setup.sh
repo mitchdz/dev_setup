@@ -16,3 +16,7 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clangd-completer
 
+
+echo"If you have not yet, add the bashrc commands to the end of your ~/.bashrc."
+echo"Enter the following command:"
+echo"    cat bashrc_ending.txt >> ~/.bashrc"
