@@ -1,5 +1,7 @@
 CONFIGS_PREFIX="src"
 
+# TODO: check if distribution/version is in approved list, abort if user wants
+
 dependencies:
 	sudo apt update -y && \
 	sudo apt install -y \
@@ -21,9 +23,6 @@ all: packages
 	@echo 'sudo add-apt-repository ppa:kgilmer/regolith-stable'
 	@echo 'sudo apt update -y'
 	@echo 'sudo apt install -y regolith-desktop'
-	@echo 'If you have not yet, add the bashrc commands to the end of your ~/.bashrc.'
-	@echo 'Enter the following command:'
-	@echo '    `make bashrc`'
 bashrc:
 	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 help:
