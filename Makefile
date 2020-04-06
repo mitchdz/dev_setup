@@ -11,7 +11,7 @@ packages: dependencies YouCompleteMe
 
 YouCompleteMe:
 	# installing vundle
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	cp ${CONFIGS_PREFIX}/.vimrc ~/
 	vim +PluginInstall +qall
 	# installing YCM
