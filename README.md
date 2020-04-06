@@ -1,10 +1,11 @@
-I now use regolith desktop!
+To install everything onto a fresh machine:
 
 ```
-sudo add-apt-repository ppa:kgilmer/regolith-stable
-sudo apt update -y
-sudo apt install -y regolith-desktop
+make all && make bashrc
 ```
+
+if you want to see more commands, run `make help`
+
 
 ## bashrc color scheme example
 ![bash color scheme](images/bash_color_example.gif)
