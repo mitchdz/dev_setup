@@ -1,6 +1,6 @@
 CONFIGS_PREFIX="src"
 
-depencies:
+dependencies:
 	sudo apt update -y && \
 	sudo apt install -y \
 		git vim screen vagrant virtualbox build-essential cmake python3-dev
@@ -23,7 +23,8 @@ all: dependencies
 	@echo 'sudo apt install -y regolith-desktop'
 	@echo 'If you have not yet, add the bashrc commands to the end of your ~/.bashrc.'
 	@echo 'Enter the following command:'
-	@echo '    cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc'
-
+	@echo '    `make bashrc`'
+bashrc:
+	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 help:
-	@echo 'run `make all` in order to install the dev environment'
+	@echo 'run `make all bashrc` in order to install the dev environment'
