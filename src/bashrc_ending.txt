@@ -3,10 +3,6 @@
 # add github credentials to user
 export EDITOR=vim
 
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/github
-clear # do not show text from adding ssh key
-
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
