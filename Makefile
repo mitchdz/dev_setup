@@ -1,6 +1,7 @@
 CONFIGS_PREFIX="src"
 
 # TODO: check if distribution/version is in approved list, abort if user wants
+# TODO: create remote dev setup target
 
 dependencies:
 	sudo apt update -y && \
@@ -17,12 +18,13 @@ YouCompleteMe:
 	# installing YCM
 	cd ~/.vim/bundle/YouCompleteMe; python3 install.py --clangd-completer
 
-all: packages
+bashrc:
+	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
+
+all: packages bashrc
 	@echo 'this build script has been tested on Ubuntu 19.04 using regolith.'
 	@echo 'sudo add-apt-repository ppa:kgilmer/regolith-stable'
 	@echo 'sudo apt update -y'
 	@echo 'sudo apt install -y regolith-desktop'
-bashrc:
-	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 help:
 	@echo 'run `make all bashrc` in order to install the dev environment'
