@@ -15,8 +15,7 @@ YouCompleteMe:
 	cp ${CONFIGS_PREFIX}/.vimrc ~/
 	vim +PluginInstall +qall
 	# installing YCM
-	cd ~/.vim/bundle/YouCompleteMe
-	python3 install.py --clangd-completer
+	cd ~/.vim/bundle/YouCompleteMe; python3 install.py --clangd-completer
 
 all: packages
 	@echo 'this build script has been tested on Ubuntu 19.04 using regolith.'
