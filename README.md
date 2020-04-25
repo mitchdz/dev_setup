@@ -1,7 +1,7 @@
 To install everything onto a fresh machine:
 
 ```
-make all && make bashrc
+make all
 ```
 
 if you want to see more commands, run `make help`
