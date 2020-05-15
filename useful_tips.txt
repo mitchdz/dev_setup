@@ -1,0 +1,3 @@
+Quickly deleting large folders (good for deleting old yocto builds)
+
+mkdir empty_dir; rsync -aP --delete empty_dir/ target_dir/ # trailing / is important!
