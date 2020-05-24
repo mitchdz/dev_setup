@@ -1,3 +1,11 @@
+
+| Distribution | Status |
+| ------------ | ------ |
+| Ubuntu 20.04 |  Pass  |
+| Ubuntu 18.04 |  Not Tested   |
+| Ubuntu 16.04 |  Not Tested   |
+
+
 To install everything onto a fresh machine:
 
 ```
