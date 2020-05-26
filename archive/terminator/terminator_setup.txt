@@ -1,6 +1,0 @@
-this file by deafult should be in ~/.config/termiantor/config
-you can create a symbolic link to this location by running the command:
-
-sudo ln -s ~/git/desktop_i3_setup/terminator/config ~/.config/terminator/config
-
-
