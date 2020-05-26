@@ -11,3 +11,4 @@ set listchars=tab:!·,trail:· " visualize tabs and spaces
 set number " show line number
 set tabstop=4 " set tabs to equal 4 spaces
 match ErrorMsg '\%>80v.\+' " highlight character spast 80 chars
+"set clipboard=exclude:.* " same as running with -X flag. Useful for server
