@@ -8,15 +8,24 @@ dependencies:
 	sudo apt install -y \
 		git vim screen vagrant virtualbox build-essential cmake python3-dev
 
-packages: dependencies YouCompleteMe
+packages: dependencies vim-packages
+vim-packages: YouCompleteMe vim-surround
 
-YouCompleteMe:
+vimrc:
+	cp ${CONFIGS_PREFIX}/.vimrc ~/
+
+YouCompleteMe: vimrc #need vimrc for vundle plugin
 	# installing vundle
 	-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	cp ${CONFIGS_PREFIX}/.vimrc ~/
 	vim +PluginInstall +qall
 	# installing YCM
 	cd ~/.vim/bundle/YouCompleteMe; python3 install.py --clangd-completer
+
+vim-surround:
+	mkdir -p ~/.vim/pack/tpope/start
+	cd ~/.vim/pack/tpope/start
+	git clone https://tpope.io/vim/surround.git
+	vim -u NONE -c "helptags surround/doc" -c q
 
 bashrc:
 	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
