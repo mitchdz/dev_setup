@@ -16,6 +16,14 @@ create vagrant test scripts to test the installation script.
 | Ubuntu 16.04 |  Not Tested   |
 
 
+## List of vim plugins installed:
+
+| Plugin | Purpose |
+| ------------ | ------ |
+| YouCompleteMe | tab Autocompletion |
+| vim-surround | automates characters surround text |
+
+
 To install everything onto a fresh machine run the following:
 
 ```
