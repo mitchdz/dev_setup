@@ -27,6 +27,10 @@ vim-surround:
 	git clone https://tpope.io/vim/surround.git
 	vim -u NONE -c "helptags surround/doc" -c q
 
+#vim-visual-multi:
+#	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+
 bashrc:
 	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 
