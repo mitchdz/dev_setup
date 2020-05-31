@@ -1,15 +1,33 @@
+# I like to use regolith with my Ubuntu environment.
+# sudo add-apt-repository ppa:kgilmer/regolith-stable
+# sudo apt update -y
+# sudo apt install -y regolith-desktop
+
 CONFIGS_PREFIX="src"
+STAGING="~/workspace/mitch-dev_setup"
 
 # TODO: check if distribution/version is in approved list, abort if user wants
 # TODO: create remote dev setup target
+#
+all-packages: dependencies vim-development terminator-setup bashrc nerdtree
+
+create_dirs:
+	mkdir -p ${STAGING}
 
 dependencies:
 	sudo apt update -y && \
 	sudo apt install -y \
 		git vim screen vagrant virtualbox build-essential cmake python3-dev
 
-packages: dependencies vim-packages
-vim-packages: YouCompleteMe vim-surround
+vim-development: YouCompleteMe vim-surround
+
+terminator-setup:
+	# add fonts
+	mkdir -p ~/.fonts/
+	git clone https://github.com/powerline/fonts ${STAGING}
+	cp ${STAGING}/fonts/UbuntuMono ~/.fonts/
+	# copy personal terminator config
+	cp ./${CONFIGS_PREFIX}/terminator/config ~/.config/terminator/config
 
 vimrc:
 	cp ${CONFIGS_PREFIX}/.vimrc ~/
@@ -27,17 +45,16 @@ vim-surround:
 	git clone https://tpope.io/vim/surround.git
 	vim -u NONE -c "helptags surround/doc" -c q
 
+nerdtree:
+	git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
 #vim-visual-multi:
 #	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
 
 bashrc:
 	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 
-all: packages bashrc
-	@echo 'this build script has been tested on Ubuntu 19.04 using regolith.'
-	@echo 'sudo add-apt-repository ppa:kgilmer/regolith-stable'
-	@echo 'sudo apt update -y'
-	@echo 'sudo apt install -y regolith-desktop'
+all: create_dirs all-packages
 help:
-	@echo 'run `make all bashrc` in order to install the dev environment'
+	@echo 'run `make all` in order to install the complete dev environment'
