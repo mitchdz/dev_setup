@@ -9,7 +9,7 @@ STAGING="~/workspace/mitch-dev_setup"
 # TODO: check if distribution/version is in approved list, abort if user wants
 # TODO: create remote dev setup target
 #
-all-packages: dependencies vim-development terminator-setup bashrc nerdtree
+all-packages: dependencies vim-development terminator-setup bashrc
 
 create_dirs:
 	mkdir -p ${STAGING}
@@ -17,17 +17,21 @@ create_dirs:
 dependencies:
 	sudo apt update -y && \
 	sudo apt install -y \
-		git vim screen vagrant virtualbox build-essential cmake python3-dev
+		git vim screen vagrant virtualbox build-essential cmake python3-dev terminator
 
-vim-development: YouCompleteMe vim-surround
+vim-development: Vundle
+
+Vundle: YouCompleteMe vim-surround
+	vim +PluginInstall +qall
 
 terminator-setup:
 	# add fonts
-	mkdir -p ~/.fonts/
-	git clone https://github.com/powerline/fonts ${STAGING}
-	cp ${STAGING}/fonts/UbuntuMono ~/.fonts/
+	-mkdir -p ~/.fonts/
+	-git clone https://github.com/powerline/fonts ${STAGING}
+	-cp ${STAGING}/fonts/UbuntuMono ~/.fonts/
 	# copy personal terminator config
-	cp ./${CONFIGS_PREFIX}/terminator/config ~/.config/terminator/config
+	-mkdir -p ${HOME}/.config/terminator
+	-cp ./${CONFIGS_PREFIX}/terminator/config ${HOME}/.config/terminator/config
 
 vimrc:
 	cp ${CONFIGS_PREFIX}/.vimrc ~/
@@ -35,19 +39,14 @@ vimrc:
 YouCompleteMe: vimrc #need vimrc for vundle plugin
 	# installing vundle
 	-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	vim +PluginInstall +qall
 	# installing YCM
 	cd ~/.vim/bundle/YouCompleteMe; python3 install.py --clangd-completer
 
 vim-surround:
 	mkdir -p ~/.vim/pack/tpope/start
 	cd ~/.vim/pack/tpope/start
-	git clone https://tpope.io/vim/surround.git
+	-git clone https://tpope.io/vim/surround.git
 	vim -u NONE -c "helptags surround/doc" -c q
-
-nerdtree:
-	git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
 #vim-visual-multi:
 #	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -58,3 +57,7 @@ bashrc:
 all: create_dirs all-packages
 help:
 	@echo 'run `make all` in order to install the complete dev environment'
+
+
+clean:
+	@echo 'TODO: NOT IMPLEMENTED YET'
