@@ -4,7 +4,9 @@
 # sudo apt install -y regolith-desktop
 
 CONFIGS_PREFIX="src"
-STAGING="~/workspace/mitch-dev_setup"
+STAGING="build"
+
+mkfile_path := $(abspath $(lastword $)MAKEFILE_LIST)))
 
 # TODO: check if distribution/version is in approved list, abort if user wants
 # TODO: create remote dev setup target
@@ -12,12 +14,12 @@ STAGING="~/workspace/mitch-dev_setup"
 all-packages: dependencies vim-development terminator-setup bashrc
 
 create_dirs:
-	mkdir -p ${STAGING}
+	-mkdir -p ${STAGING}
 
 dependencies:
 	sudo apt update -y && \
 	sudo apt install -y \
-		git vim screen vagrant virtualbox build-essential cmake python3-dev terminator
+		vim build-essential cmake python3-dev terminator
 
 vim-development: Vundle
 
@@ -39,6 +41,7 @@ vimrc:
 YouCompleteMe: vimrc #need vimrc for vundle plugin
 	# installing vundle
 	-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	vim +PluginInstall +qall
 	# installing YCM
 	cd ~/.vim/bundle/YouCompleteMe; python3 install.py --clangd-completer
 
@@ -55,6 +58,7 @@ bashrc:
 	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 
 all: create_dirs all-packages
+	@echo ${mkfile_path}
 help:
 	@echo 'run `make all` in order to install the complete dev environment'
 
