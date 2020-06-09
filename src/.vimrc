@@ -14,5 +14,9 @@ set tabstop=4 " set tabs to equal 4 spaces
 match ErrorMsg '\%>80v.\+' " highlight character spast 80 chars
 "set clipboard=exclude:.* " same as running with -X flag. Useful for server
 
-nmap <F6> :NERDTreeToggle<CR>
+nmap <F0> :NERDTreeToggle<CR>
 
+au BufReadPost *.bb set syntax=python
+au BufReadPost *.bblayer set syntax=python
+
+set colorscheme torte
