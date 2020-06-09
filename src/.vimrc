@@ -19,4 +19,4 @@ nmap <F0> :NERDTreeToggle<CR>
 au BufReadPost *.bb set syntax=python
 au BufReadPost *.bblayer set syntax=python
 
-set colorscheme torte
+colors torte
