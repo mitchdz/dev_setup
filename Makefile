@@ -30,7 +30,7 @@ terminator-setup:
 	# add fonts
 	-mkdir -p ~/.fonts/
 	-git clone https://github.com/powerline/fonts ${STAGING}
-	-cp ${STAGING}/fonts/UbuntuMono ~/.fonts/
+	-cp -r ${STAGING}/UbuntuMono ~/.fonts/
 	# copy personal terminator config
 	-mkdir -p ${HOME}/.config/terminator
 	-cp ./${CONFIGS_PREFIX}/terminator/config ${HOME}/.config/terminator/config
@@ -46,7 +46,7 @@ YouCompleteMe: vimrc #need vimrc for vundle plugin
 	cd ~/.vim/bundle/YouCompleteMe; python3 install.py --clangd-completer
 
 vim-surround:
-	mkdir -p ~/.vim/pack/tpope/start
+	-mkdir -p ~/.vim/pack/tpope/start
 	cd ~/.vim/pack/tpope/start
 	-git clone https://tpope.io/vim/surround.git
 	vim -u NONE -c "helptags surround/doc" -c q
@@ -58,10 +58,16 @@ bashrc:
 	cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 
 all: create_dirs all-packages
-	@echo ${mkfile_path}
 help:
 	@echo 'run `make all` in order to install the complete dev environment'
 
 
 clean:
-	@echo 'TODO: NOT IMPLEMENTED YET'
+	rm -rf surround
+	rm -rf build
+	@echo 'TODO: NOT FULLY IMPLEMENTED YET'
+
+
+
+
+
