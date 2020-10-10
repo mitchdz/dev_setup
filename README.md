@@ -38,6 +38,14 @@ the git repository you are on. The below gif indicates what I'm talking about
 :smile:
 ![bash color scheme](images/bash_color_example.gif)
 
+# Disabling tap to click
+Tap to click is too sensitive, causing ghost clicks while typing on my laptop. To disable on startup,
+```
+sudo echo "synclient MaxTapTime=0" > /etc/profile.d/disable_tap_to_click.sh
+
+```
+
+
 ---
 
 # Q&A
