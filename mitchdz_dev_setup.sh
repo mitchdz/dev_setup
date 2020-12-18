@@ -2,13 +2,20 @@
 # https://regolith-linux.org/download/
 
 CONFIGS_PREFIX="src"
-STAGING="~/.mitchdz_dev_setup/"
-
+STAGING="${HOME}/.mitchdz_dev_setup"
 mkdir -p ${STAGING}
+mkdir -p ${HOME}/.config
+mkdir -p ${HOME}/.vim/colors
+mkdir -p ${HOME}/.config/terminator
+mkdir -p ${HOME}/.vim/pack/tpope/start
 
 # install dependencies
 sudo apt-get update -y
-sudo apt-get install -y vim build-essential cmake python3-dev terminator
+sudo apt-get install -y vim build-essential cmake python3-dev terminator git
+
+# vim-monokai font
+git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai
+cp ${STAGING}/vim-monokai/colors/monokai.vim ${HOME}/.vim/colors/
 
 # YouCompleteMe
 cp ${CONFIGS_PREFIX}/.vimrc ~/
@@ -19,8 +26,7 @@ python3 install.py --clangd-completer
 cd -
 
 # vim-surround
-mkdir -p ~/.vim/pack/tpope/start
-cd ~/.vim/pack/tpope/start
+cd ${HOME}/.vim/pack/tpope/start
 git clone https://tpope.io/vim/surround.git
 vim -u NONE -c "helptags surround/doc" -c q
 cd -
@@ -29,11 +35,7 @@ cd -
 vim +PluginInstall +qall
 
 # Terminator config
-mkdir -p ~/.fonts/
-git clone https://github.com/powerline/fonts ${STAGING}
-cp -r ${STAGING}/UbuntuMono ~/.fonts/
-mkdir -p ~/.config/terminator
-cp ./${CONFIGS_PREFIX}/terminator/config ~/.config/terminator/config
+cp ./${CONFIGS_PREFIX}/terminator/config ${HOME}/.config/terminator/config
 
 # bashrc
 cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
