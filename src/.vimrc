@@ -11,8 +11,8 @@ filetype plugin indent on
 " :set tabstop=4 expandtab
 " :retab
 
-set list
-set listchars=tab:!·,trail:· " visualize tabs and spaces
+"set list
+"set listchars=tab:!·,trail:· " visualize tabs and spaces
 set number " show line number
 match ErrorMsg '\%>80v.\+' " highlight character spast 80 chars
 "this sometimes helps performance when running on
