@@ -14,7 +14,7 @@ filetype plugin indent on
 "set list
 "set listchars=tab:!·,trail:· " visualize tabs and spaces
 set number " show line number
-match ErrorMsg '\%>80v.\+' " highlight character spast 80 chars
+"match ErrorMsg '\%>80v.\+' " highlight character spast 80 chars
 "this sometimes helps performance when running on
 "servers
 "set clipboard=exclude:.* 
