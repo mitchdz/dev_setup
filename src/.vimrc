@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"Plugin 'ycm-core/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
