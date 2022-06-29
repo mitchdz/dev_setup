@@ -1,3 +1,5 @@
+set -o xtrace #print each command before executing it
+
 CONFIGS_PREFIX="src"
 STAGING="${HOME}/.mitchdz_dev_setup"
 mkdir -p ${STAGING}
@@ -12,14 +14,14 @@ mkdir -p ${HOME}/.vim/pack/tpope/start
 
 dnf install -y util-linux-user # for chsh command
 dnf install -y zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# vim-monokai is corrupting YCM https://github.com/ycm-core/YouCompleteMe/issues/3464
 # vim-monokai font
-git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai
-cp ${STAGING}/vim-monokai/colors/monokai.vim ${HOME}/.vim/colors/
+#git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai
+#cp ${STAGING}/vim-monokai/colors/monokai.vim ${HOME}/.vim/colors/
 
 # Vundle
-cp ${CONFIGS_PREFIX}/.vimrc ~/
+\cp ${CONFIGS_PREFIX}/vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
@@ -40,8 +42,12 @@ vim +PluginInstall +qall
 # Terminator config
 cp ./${CONFIGS_PREFIX}/terminator/config ${HOME}/.config/terminator/config
 
-# bashrc
+# bashrc endings # TODO: remove as using zsh now
 cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 
+# zshrc
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --skip-chsh --unattended --keep-zshrc
+\cp ${CONFIGS_PREFIX}/zshrc > ~/.zshrc
+
 # Remove staging folder
-rm -rf ${STAGING}
+#rm -rf ${STAGING}

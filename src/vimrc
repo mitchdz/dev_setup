@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/tagbar'
 call vundle#end()
 filetype plugin indent on
 
@@ -23,6 +24,9 @@ set number " show line number
 "set tabstop=4 " set tabs to equal 4 spaces
 "set tabstop=4 shiftwidth=4 expandtab
 
+" F8 to open tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " F10 to open NERDTree
 nmap <F10> :NERDTreeToggle<CR>
 "Ctrl+Left scales window to left
@@ -38,5 +42,5 @@ nmap <C-Down> :res -5<CR>
 au BufReadPost *.bb set syntax=python
 au BufReadPost *.bblayer set syntax=python
 
-syntax enable
-colorscheme monokai
+"syntax enable
+"colorscheme monokai

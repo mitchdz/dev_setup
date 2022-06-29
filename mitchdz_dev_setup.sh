@@ -18,7 +18,7 @@ git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai
 cp ${STAGING}/vim-monokai/colors/monokai.vim ${HOME}/.vim/colors/
 
 # Vundle
-cp ${CONFIGS_PREFIX}/.vimrc ~/
+cp ${CONFIGS_PREFIX}/vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
