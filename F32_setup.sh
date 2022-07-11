@@ -47,7 +47,7 @@ cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
 
 # zshrc
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --skip-chsh --unattended --keep-zshrc
-\cp ${CONFIGS_PREFIX}/zshrc > ~/.zshrc
+\cp ${CONFIGS_PREFIX}/zshrc ~/.zshrc
 
 # Remove staging folder
 #rm -rf ${STAGING}
