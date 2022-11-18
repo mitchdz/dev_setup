@@ -6,12 +6,11 @@ STAGING="${HOME}/.mitchdz_dev_setup"
 mkdir -p ${STAGING}
 mkdir -p ${HOME}/.config
 mkdir -p ${HOME}/.vim/colors
-mkdir -p ${HOME}/.config/terminator
 mkdir -p ${HOME}/.vim/pack/tpope/start
 
 # install dependencies
 sudo apt-get update -y
-sudo apt-get install -y vim build-essential cmake python3-dev terminator git
+sudo apt-get install -y vim build-essential cmake python3-dev git
 
 # vim-monokai font
 git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai
@@ -35,9 +34,6 @@ cd -
 
 # Vundle invocation
 vim +PluginInstall +qall
-
-# Terminator config
-cp ./${CONFIGS_PREFIX}/terminator/config ${HOME}/.config/terminator/config
 
 # bashrc
 cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
