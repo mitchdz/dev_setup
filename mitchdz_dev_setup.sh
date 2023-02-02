@@ -10,7 +10,7 @@ mkdir -p ${HOME}/.vim/pack/tpope/start
 
 # install dependencies
 sudo apt-get update -y
-sudo apt-get install -y vim build-essential cmake python3-dev git
+sudo apt-get install -y vim build-essential cmake python3-dev git zsh
 
 # vim-monokai font
 git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai
@@ -37,6 +37,10 @@ vim +PluginInstall +qall
 
 # bashrc
 cat ${CONFIGS_PREFIX}/bashrc_ending.txt >> ~/.bashrc
+
+# zshrc
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --skip-chsh --unattended --keep-zshrc
+\cp ${CONFIGS_PREFIX}/zshrc ~/.zshrc
 
 # Remove staging folder
 rm -rf ${STAGING}
