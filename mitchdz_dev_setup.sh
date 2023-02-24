@@ -10,7 +10,15 @@ mkdir -p ${HOME}/.vim/pack/tpope/start
 
 # install dependencies
 sudo apt-get update -y
-sudo apt-get install -y vim build-essential cmake python3-dev git zsh
+sudo apt-get install -y \
+	vim \
+	build-essential \
+	cmake \
+	python3-dev \
+	git \
+	zsh \
+	curl \
+	fonts-powerline # for omz agnoster theme
 
 # vim-monokai font
 git clone https://github.com/sickill/vim-monokai ${STAGING}/vim-monokai

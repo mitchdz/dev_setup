@@ -7,14 +7,6 @@ learn something cool and new.
 regolith-desktop
 * https://regolith-linux.org/download/
 
-## List of tested machines:
-| Distribution | Status |
-| ------------ | ------ |
-| Ubuntu 20.10 |  Pass  |
-| Ubuntu 20.04 |  Not Tested  |
-| Ubuntu 18.04 |  Not Tested  |
-| Ubuntu 16.04 |  Not Tested  |
-
 ## List of vim plugins installed:
 | Plugin | Purpose |
 | ------------ | ------ |
